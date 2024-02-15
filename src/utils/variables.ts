@@ -1,0 +1,1 @@
+export const emailAddress = "info@seacraft.com"

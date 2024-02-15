@@ -1,7 +1,7 @@
 import './App.scss'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { Home } from './pages'
-import { NavBar } from './components'
+import { Footer, NavBar } from './components'
 
 const App = () => {
 
@@ -11,6 +11,7 @@ const App = () => {
       <Routes>
         <Route path='/' element={<Home />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   )
 }
