@@ -1,6 +1,7 @@
 .app__header {
     position: fixed;
     width: 100%;
+    z-index: 10;
 
     &__nav {
         padding: $xs $px-fluid;
