@@ -69,6 +69,7 @@ const Home: FC = () => {
                     </Link>
                 </div>
             </section>
+            <div className="latest-news"></div>
         </div>
     )
 }
