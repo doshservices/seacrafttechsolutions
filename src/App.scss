@@ -3,4 +3,17 @@
 @import "./styles/components/header";
 @import "./styles/components/footer";
 @import "./styles/components/slider/homeSwiper";
+@import "./styles/components/pages-hero";
 @import "./styles/pages/home";
+@import "./styles/pages/about";
+
+.about-hero {
+    background: linear-gradient(hsla(0, 0%, 0%, 0.6), hsla(0, 0%, 0%, 0.6)), url("./assets/Seacraft\ Asset/Images/[Downloader.la]-65c6719d6acdc.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: $light100;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 600px;
+}

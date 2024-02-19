@@ -1,20 +1,15 @@
 import { FC } from "react";
 import { Link } from "react-router-dom";
-import { HomeSlider } from "../components";
 import { services } from "../data/services";
+import { HomeSlider } from "../components";
 import ArrowLight from "../assets/Icons/arrow-light.svg"
 import patners from "../assets/Icons/Partners.png"
 import chartsImg from "../assets/Seacraft Asset/Images/1707487196965.png"
 import chartBg from "../assets/Seacraft Asset/Images/charts-bg.png"
 import chartBgDesktop from "../assets/Seacraft Asset/Images/chart-bg-desktop.png"
-import { useWindowWidth } from "../utils/useWindowWidth";
 import { latestNews } from "../data/latestNews";
-
-interface latestUpdate {
-    image: string,
-    title: string,
-    date: string
-}
+import { latestUpdate } from "../utils/interface";
+import { useWindowWidth } from "../utils/useWindowWidth";
 
 const Home: FC = () => {
     const windowWidth = useWindowWidth()
@@ -119,4 +114,4 @@ const Home: FC = () => {
     )
 }
 
-export default Home
+export default Home;

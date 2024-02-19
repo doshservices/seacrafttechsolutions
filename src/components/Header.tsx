@@ -21,10 +21,10 @@ export const NavBar: FC = () => {
                     <AppLogo />
                     <ul ref={navLinksRef} className="app__header__nav__links">
                         <li>
-                            <NavLink className={({ isActive }) => isActive ? "active" : ""} to="/">Home</NavLink>
+                            <NavLink onClick={showMenu} className={({ isActive }) => isActive ? "active" : ""} to="/">Home</NavLink>
                         </li>
                         <li>
-                            <NavLink to="/about-us">About Us</NavLink>
+                            <NavLink onClick={showMenu} to="/about-us">About Us</NavLink>
                         </li>
                         <li>
                             <NavLink to="/services" className="dropdown">
@@ -33,10 +33,10 @@ export const NavBar: FC = () => {
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to="/sustainability">Sustainability</NavLink>
+                            <NavLink onClick={showMenu} to="/sustainability">Sustainability</NavLink>
                         </li>
                         <li>
-                            <NavLink to="/contact-us">Contact Us</NavLink>
+                            <NavLink onClick={showMenu} to="/contact-us">Contact Us</NavLink>
                         </li>
                     </ul>
                     {windowWidth <= 850 ?

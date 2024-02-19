@@ -1,0 +1,38 @@
+.pages__hero {
+    padding-top: 76px;
+
+    @media (max-width: 850px) {
+        padding-top: 60px;
+    }
+
+    .wrapper {
+        padding: clamp($base, 8vw, calc($base * 20));
+
+        h2 {
+            max-width: 691px;
+            font-size: 4.2rem;
+            margin-bottom: $lg;
+
+            @media (max-width: 800px) {
+                font-size: $xxl;
+                margin-bottom: $xx;
+            }
+
+            @media (max-width: 480px) {
+                font-size: calc($lg + 2px);
+                text-align: center;
+            }
+        }
+
+        p {
+            text-align: justify;
+            max-width: 691px;
+            margin: $base 0;
+            line-height: 1.85;
+
+            @media (max-width: 480px) {
+                text-align: center;
+            }
+        }
+    }
+}
