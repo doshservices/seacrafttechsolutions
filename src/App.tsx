@@ -1,6 +1,6 @@
 import './App.scss'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import { About, Home } from './pages'
+import { About, Home, Services } from './pages'
 import { Footer, NavBar } from './components'
 
 const App = () => {
@@ -11,6 +11,7 @@ const App = () => {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/about-us' element={<About />} />
+        <Route path='/services' element={<Services />} />
       </Routes>
       <Footer />
     </BrowserRouter>
