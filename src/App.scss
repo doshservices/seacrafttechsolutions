@@ -7,6 +7,7 @@
 @import "./styles/pages/home";
 @import "./styles/pages/about";
 @import "./styles/pages/services";
+@import "./styles/pages/carrers";
 
 .about-hero {
     background: linear-gradient(hsla(0, 0%, 0%, 0.6), hsla(0, 0%, 0%, 0.6)), url("./assets/Seacraft\ Asset/Images/[Downloader.la]-65c6719d6acdc.jpg");
@@ -17,4 +18,16 @@
     flex-direction: column;
     justify-content: center;
     min-height: 600px;
+}
+
+.carrers__hero {
+    background: linear-gradient(hsla(0, 0%, 0%, 0.6), hsla(0, 0%, 0%, 0.6)), url("./assets/Seacraft\ Asset/Images/steptodown.com413243.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: $light100;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 550px;
+    background-position-y: 54%;
 }
