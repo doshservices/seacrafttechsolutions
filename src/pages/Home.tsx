@@ -40,7 +40,7 @@ const Home: FC = () => {
                     From customized subsea tooling to autonomous unmanned vehicles, we deliver unparalleled expertise in facilitating safe and efficient operations beneath the waves.
                 </p>
                 <div className="services">
-                    {services.map((service: any, index: number) =>
+                    {services.slice(0, 8).map((service: any, index: number) =>
                         <div key={index}>
                             <img src={service.icon} alt="" />
                             <h4>{service.name}</h4>

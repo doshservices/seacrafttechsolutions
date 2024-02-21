@@ -1,4 +1,105 @@
 #services {
     margin: 0 $px-fluid;
     padding: 8rem $xl 3rem $xl;
+    position: relative;
+
+    @media (max-width: 480px) {
+        padding: 7rem 0 3rem 0;
+        margin: 0;
+    }
+
+    &::after,
+    &::before {
+        background: $secondary100;
+        width: 1px;
+        position: absolute;
+        content: "";
+        display: block;
+        pointer-events: none;
+
+        @media (max-width: 480px) {
+            display: none;
+        }
+    }
+
+    &::after {
+        top: 0;
+        bottom: 20%;
+        right: 0;
+    }
+
+    &::before {
+        top: 0;
+        bottom: 20%;
+        left: 0;
+    }
+
+    h2 {
+        font-size: $sm;
+        color: $secondary100;
+
+        @media (max-width: 480px) {
+            text-align: center;
+        }
+    }
+
+    h3 {
+        margin: $sm 0;
+        font-size: calc($xx + 10px);
+        font-weight: 400;
+        max-width: 344px;
+
+        @media (max-width: 480px) {
+            font-size: calc($lg + 2px);
+            text-align: center;
+            padding: 0 $base;
+        }
+    }
+
+    p {
+        text-align: justify;
+        line-height: 1.7;
+
+        @media (max-width: 480px) {
+            text-align: center;
+            padding: 0 $base;
+        }
+    }
+
+    .services__type {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 3rem;
+
+        figure {
+            flex-grow: 1;
+            flex-basis: 350px;
+            padding: $base;
+            outline: 1px solid $secondary100;
+            max-width: 400px;
+
+            @media (max-width: 1250px) {
+                flex-basis: 270px;
+            }
+
+            @media (max-width: 980px) {
+                flex-basis: 240px;
+            }
+
+            @media (max-width: 700px) {
+                max-width: 100%;
+            }
+
+            img {
+                width: 100%;
+            }
+
+            figcaption {
+                font-size: $base;
+                margin-top: $sm;
+            }
+
+        }
+    }
 }
