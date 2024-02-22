@@ -1,3 +1,77 @@
 .home__swiper {
-    height: 400px;
+    padding-top: 70px;
+    position: relative;
+
+    .navigation-buttons {
+        position: absolute;
+        display: flex;
+        gap: $lg;
+        bottom: 3rem;
+        left: 3rem;
+
+        button {
+            background: transparent;
+            border: none;
+        }
+    }
+
+    .home__slider {
+        // background: black;
+
+        .slides {
+            padding: 3rem clamp($base, 8vw, calc($base * 20));
+            // height: 600px;
+            min-height: 600px;
+            width: 100% !important;
+            z-index: 100;
+            color: $light100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            isolation: isolate;
+
+            .background-image {
+                position: absolute;
+                inset: 0;
+                z-index: -2;
+            }
+
+            &::before {
+                content: "";
+                display: block;
+                position: absolute;
+                inset: 0;
+                background: hsla(0, 0%, 0%, 0.6);
+                z-index: -1;
+            }
+
+            h1 {
+                font-size: 70px;
+                max-width: 424px;
+                margin: $base 0;
+            }
+
+            h2 {
+                font-size: $sm;
+                font-weight: 400;
+            }
+
+            p {
+                max-width: 289px;
+                line-height: 1.7;
+            }
+
+            a {
+                font-size: $sm;
+                color: $light100;
+                background: $secondary100;
+                border-radius: 12px;
+                padding: 10px 20px;
+                display: block;
+                width: fit-content;
+                margin-top: $xx;
+            }
+        }
+    }
 }
