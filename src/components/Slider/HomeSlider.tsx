@@ -1,15 +1,15 @@
-import { Swiper, SwiperSlide, SwiperClass } from 'swiper/react';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/effect-fade';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { EffectFade, Navigation, Pagination, Autoplay } from 'swiper/modules';
-import { useState, FC } from 'react';
+import { FC } from 'react';
 import { slides } from '../../data/homeSlider';
 import { Link } from 'react-router-dom';
 
 export const HomeSlider: FC = () => {
-    const [swiperRef, setSwiperRef] = useState<SwiperClass | null>(null);
+    // const [swiperRef, setSwiperRef] = useState<SwiperClass | null>(null);
 
     return (
         <div className='home__swiper'>
@@ -28,7 +28,7 @@ export const HomeSlider: FC = () => {
                 </button>
             </div>
             <Swiper
-                onSwiper={setSwiperRef}
+                // onSwiper={setSwiperRef}
                 effect={'fade'}
                 loop={true}
                 pagination={{
