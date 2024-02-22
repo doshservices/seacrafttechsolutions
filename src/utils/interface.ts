@@ -16,3 +16,8 @@ export interface latestUpdate {
     title: string,
     date: string
 }
+
+export interface Position {
+    role: string
+    qualification: string
+}

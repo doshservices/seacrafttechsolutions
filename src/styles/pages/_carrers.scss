@@ -40,4 +40,100 @@
             }
         }
     }
+
+    &__open__positions {
+        padding: $lg $px-fluid;
+
+        @media (max-width: 480px) {
+            padding: $lg 0;
+        }
+
+        .position {
+            >div {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                column-gap: 3rem;
+                row-gap: $base;
+                padding: $lg 0;
+                border: 1px solid $secondary100;
+
+                @media (max-width: 950px) {
+                    column-gap: $lg;
+                }
+
+                @media (max-width: 750px) {
+                    flex-wrap: wrap;
+                    padding: $lg;
+                }
+
+            }
+        }
+
+        h2 {
+            margin: $sm 0;
+            font-size: calc($xx + 10px);
+            font-weight: 400;
+            max-width: 344px;
+
+            @media (max-width: 480px) {
+                font-size: calc($lg + 2px);
+                text-align: center;
+                padding: 0 $base;
+            }
+        }
+
+        h4 {
+            font-size: calc($base + 2px);
+            font-weight: 700;
+            flex-shrink: 0;
+            max-width: 291px;
+            border-right: 1px solid $secondary100;
+            padding: 10px $xl;
+
+            @media (max-width: 950px) {
+                padding: 10px 0;
+            }
+
+            @media (max-width: 750px) {
+                border-right: 0;
+            }
+        }
+
+        p {
+            text-align: justify;
+            font-size: $base;
+            border-right: 1px solid $secondary100;
+            padding-right: $xl;
+
+            @media (max-width: 950px) {
+                padding-right: $base;
+            }
+
+            @media (max-width: 750px) {
+                border-right: 0;
+                order: 3;
+            }
+        }
+
+        button {
+            font-size: $sm;
+            color: $light100;
+            background: $secondary100;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            flex-shrink: 0;
+            margin-right: $xl;
+
+            @media (max-width: 950px) {
+                margin-right: $base;
+            }
+
+            @media (max-width: 750px) {
+                order: 2;
+                margin-right: 0;
+            }
+        }
+    }
 }
