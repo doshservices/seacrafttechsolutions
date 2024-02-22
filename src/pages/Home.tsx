@@ -42,7 +42,7 @@ const Home: FC = () => {
                 <div className="services">
                     {services.slice(0, 8).map((service: any, index: number) =>
                         <div key={index}>
-                            <img src={service.icon} alt="" />
+                            <img src={service.icon} alt="" loading="lazy" />
                             <h4>{service.name}</h4>
                             <p>{service.briefDescription}</p>
                             <Link className="link" to={`${service.url}`}>
@@ -65,9 +65,9 @@ const Home: FC = () => {
                 <img src={patners} width="100%" alt="" />
             </figure>
             <section className="charts">
-                <img src={windowWidth > 500 ? chartBgDesktop : chartBg} alt="background-img" className="background" />
+                <img src={windowWidth > 500 ? chartBgDesktop : chartBg} alt="background-img" className="background" loading="lazy" />
                 <figure>
-                    <img src={chartsImg} alt="charts logo" />
+                    <img src={chartsImg} alt="charts logo" loading="lazy" />
                 </figure>
                 <div>
                     <h2>CAREERS</h2>
@@ -85,7 +85,7 @@ const Home: FC = () => {
                     {latestNews.map((news: latestUpdate, index: number) =>
                         <div title={news.title} key={index} className="news">
                             <figure>
-                                <img src={news.image} alt={news.title} />
+                                <img src={news.image} alt={news.title} loading="lazy" />
                             </figure>
                             <div className="wrapper">
                                 <div>

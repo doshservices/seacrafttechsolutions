@@ -1,0 +1,90 @@
+.contact {
+    padding: 6.5rem $px-fluid $xx $px-fluid;
+
+    @media (max-width: 480px) {
+        padding: 60px 0 $xx 0;
+    }
+
+    &__address {
+        border: 1px solid $secondary100;
+        display: flex;
+        justify-content: space-between;
+        margin-top: $xl;
+
+        @media (max-width: 720px) {
+            flex-wrap: wrap;
+        }
+
+        @media (max-width: 480px) {
+            border-right: 0;
+            border-left: 0;
+        }
+
+        div,
+        form {
+            flex-grow: 1;
+            flex-basis: 350px;
+
+            img {
+                width: 100%;
+                min-height: 100%;
+            }
+        }
+
+        div {
+            padding: $base;
+            border-right: 1px solid $secondary100;
+            overflow: hidden;
+
+            @media (max-width: 720px) {
+                border-right: 0;
+            }
+        }
+
+        form {
+            padding: $base;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: $xx;
+
+            fieldset {
+                border: 1px solid $secondary100;
+                padding: 0 $base;
+
+                legend {
+                    font-size: $base;
+                    padding: 0 $tiny;
+                }
+
+                input,
+                textarea {
+                    border: none;
+                    resize: none;
+                    padding: $sm $tiny;
+                    font-size: $base;
+                    width: 100%;
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+
+                textarea {
+                    height: 160px;
+                }
+            }
+
+            button {
+                font-size: $sm;
+                color: $light100;
+                background: $secondary100;
+                border: none;
+                border-radius: 4px;
+                padding: 12px 20px;
+                margin-top: $base;
+                width: fit-content;
+            }
+        }
+    }
+}

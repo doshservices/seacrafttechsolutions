@@ -22,7 +22,7 @@ const About: FC = () => {
             {windowWidth > 600 ?
                 <div className="mission__vision__desktop">
                     <figure>
-                        <img src={vision} alt="vision and mission" />
+                        <img src={vision} alt="vision and mission" loading="lazy" />
                     </figure>
                     <div>
                         <section>
@@ -56,7 +56,7 @@ const About: FC = () => {
                                     <p>To be the leading offshore technology solution serviceprovider of choice in Nigeria and the West Africa sub region.</p>
                                 </section>
                                 <figure>
-                                    <img src={vision} alt="vision and mission" />
+                                    <img src={vision} alt="vision and mission" loading="lazy" />
                                 </figure>
                                 <section>
                                     <h3>MISION</h3>

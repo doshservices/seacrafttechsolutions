@@ -24,7 +24,7 @@ export const NavBar: FC = () => {
                             <NavLink onClick={showMenu} className={({ isActive }) => isActive ? "active" : ""} to="/">Home</NavLink>
                         </li>
                         <li>
-                            <NavLink onClick={showMenu} to="/about-us">About Us</NavLink>
+                            <NavLink onClick={showMenu} to="/about">About Us</NavLink>
                         </li>
                         <li>
                             <NavLink to="/services" className="dropdown">
@@ -36,7 +36,7 @@ export const NavBar: FC = () => {
                             <NavLink onClick={showMenu} to="/sustainability">Sustainability</NavLink>
                         </li>
                         <li>
-                            <NavLink onClick={showMenu} to="/contact-us">Contact Us</NavLink>
+                            <NavLink onClick={showMenu} to="/contact">Contact Us</NavLink>
                         </li>
                     </ul>
                     {windowWidth <= 850 ?

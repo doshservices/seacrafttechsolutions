@@ -15,7 +15,7 @@ const Services: FC = () => {
                 <div className="services__type">
                     {services.map((service: any, index: number) =>
                         <figure key={index}>
-                            <img src={service.logo} alt="" />
+                            <img src={service.logo} alt="" loading="lazy" />
                             <figcaption>{service.name}</figcaption>
                         </figure>
                     )}
