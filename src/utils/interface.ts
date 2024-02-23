@@ -21,3 +21,8 @@ export interface Position {
     role: string
     qualification: string
 }
+
+export interface ServiceLinks {
+    name: string
+    url: string
+}
