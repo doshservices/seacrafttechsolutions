@@ -34,10 +34,10 @@ export const HomeSlider: FC = () => {
                 pagination={{
                     clickable: true
                 }}
-                // autoplay={{
-                //     delay: 3500,
-                //     disableOnInteraction: false,
-                // }}
+                autoplay={{
+                    delay: 5000,
+                    disableOnInteraction: false,
+                }}
                 className='home__slider'
                 modules={[EffectFade, Pagination, Navigation, Autoplay]}
             >

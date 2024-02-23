@@ -6,7 +6,8 @@
     }
 
     .wrapper {
-        padding: clamp($base, 8vw, calc($base * 20));
+        padding: 3rem clamp($base, 8vw, calc($base * 20));
+        min-height: 670px;
 
         h2 {
             max-width: 691px;
