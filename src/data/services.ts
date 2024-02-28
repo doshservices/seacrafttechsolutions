@@ -31,7 +31,7 @@ import piggingPageIcon from "../assets/Icons/piggingPageIcon.svg"
 import corossionLogo from "../assets/Seacraft Asset/Images/corossion.png"
 import corossionHero from "../assets/Seacraft Asset/Images/corrosionHero.png"
 import corrosionIcon from "../assets/Icons/corrosion.svg"
-import corrosionPageIcon from "../assets/Icons/corrosion.svg"
+import corrosionPageIcon from "../assets/Icons/corrosionPageIcon.svg"
 
 import dredging from "../assets/Seacraft Asset/Images/dredging.png"
 import dredgingIcon from "../assets/Icons/hydraulic.svg"
@@ -49,7 +49,6 @@ import wellborePageIcon from "../assets/Icons/cleanoutPageIcon.svg"
 import welltesting from "../assets/Seacraft Asset/Images/wellTesting.png"
 import welltestingHero from "../assets/Seacraft Asset/Images/testingHero.png"
 import welltestingPageIcon from "../assets//Icons/testingPageIcon.svg"
-
 
 import supply from "../assets/Seacraft Asset/Images/supplyChain.png"
 import supplychainHero from "../assets/Seacraft Asset/Images/supplyChainHero.png"

@@ -42,7 +42,6 @@ const Home: FC = () => {
                 <div className="services">
                     {services.slice(0, 8).map((service: any, index: number) =>
                         <div key={index}>
-
                             <img src={service.icon} alt="" loading="lazy" />
                             <h4>{service.name}</h4>
                             <p>{service.briefDescription}</p>
