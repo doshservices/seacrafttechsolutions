@@ -19,4 +19,24 @@ $tiny: .6rem;
 $xxs: .5rem;
 
 //box model
-$px-fluid: clamp($base, 5vw, calc($base * 20))
+$px-fluid: clamp($base, 5vw, calc($base * 20));
+
+//fonts
+@font-face {
+    font-family: 'Recoleta';
+    font-style: normal;
+    font-weight: normal;
+    src: url('/public/recoleta-regulardemo.otf');
+}
+
+@font-face {
+    font-family: 'AvenirLT';
+    font-style: normal;
+    font-weight: normal;
+    src: url('/public/AvenirLTProBook.otf');
+}
+
+$Recoleta: "Recoleta", sans-serif, Arial;
+$Ubuntu: "Ubuntu", sans-serif, Arial;
+$AvenitLT: "AvenirLT", sans-serif, Arial;
+$Inter: "Inter", sans-serif, Arial;

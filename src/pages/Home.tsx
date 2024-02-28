@@ -42,6 +42,7 @@ const Home: FC = () => {
                 <div className="services">
                     {services.slice(0, 8).map((service: any, index: number) =>
                         <div key={index}>
+
                             <img src={service.icon} alt="" loading="lazy" />
                             <h4>{service.name}</h4>
                             <p>{service.briefDescription}</p>
@@ -73,7 +74,7 @@ const Home: FC = () => {
                     <h2>CAREERS</h2>
                     <h3>Chart Your Course to Success</h3>
                     <p>Join us in pushing the boundaries of subsea and marine technology, and embark on a rewarding journey where your skills and aspirations are valued and empowered to thrive.</p>
-                    <Link to="#">
+                    <Link to="/carrers">
                         Careers
                     </Link>
                 </div>

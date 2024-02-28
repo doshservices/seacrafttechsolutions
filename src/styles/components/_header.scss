@@ -15,7 +15,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            column-gap: 3vw;
+            column-gap: 2.5vw;
             background: $primary100;
 
             .dropdown__links {
@@ -52,6 +52,7 @@
 
                     a {
                         padding: $thin 0;
+                        font-size: $sm;
                     }
                 }
 
@@ -68,9 +69,10 @@
 
                 a {
                     color: $light100;
-                    padding: $base 2px;
+                    padding: $base 0;
                     display: block;
                     position: relative;
+                    font-family: $Recoleta;
 
                     &::after {
                         position: absolute;
@@ -108,6 +110,7 @@
                     padding: $thin 0;
                     display: block;
                     color: $light100;
+                    font-size: $sm;
                 }
             }
 

@@ -14,6 +14,7 @@
         h2 {
             font-size: $sm;
             color: $secondary100;
+            font-family: $AvenitLT;
         }
 
         h3 {
@@ -21,6 +22,8 @@
             margin: $sm 0;
             font-size: calc($xx + 10px);
             font-weight: 400;
+            font-family: $Recoleta;
+            line-height: 1.2;
 
             @media (max-width: 480px) {
                 font-size: calc($lg + 2px);
@@ -30,6 +33,8 @@
         p {
             font-size: $base;
             text-align: justify;
+            font-family: $AvenitLT;
+            line-height: 1.7;
         }
     }
 
@@ -51,6 +56,7 @@
             display: block;
             margin: 0 auto;
             width: fit-content;
+            font-family: $Ubuntu;
         }
 
         @media (max-width: 480px) {
@@ -62,12 +68,15 @@
         h2 {
             font-size: $sm;
             color: $secondary100;
+            font-family: $AvenitLT;
         }
 
         h3 {
             margin: $sm 0;
             font-size: calc($xx + 10px);
             font-weight: 400;
+            font-family: $Recoleta;
+            line-height: 1.2;
 
             @media (max-width: 480px) {
                 font-size: calc($lg + 2px);
@@ -76,6 +85,8 @@
 
         .intro {
             max-width: 500px;
+            font-family: $AvenitLT;
+            line-height: 1.7;
         }
 
         .services {
@@ -97,12 +108,16 @@
                 h4 {
                     margin: $base 0;
                     font-size: calc($base + 2px);
+                    font-family: $AvenitLT;
+                    font-weight: 600;
                 }
 
                 p {
                     text-align: justify;
                     font-size: $sm;
-                    line-height: 1.6;
+                    line-height: 1.7;
+                    font-family: $AvenitLT;
+                    font-weight: 300;
                 }
 
                 .link {
@@ -129,6 +144,7 @@
         h2 {
             font-size: $sm;
             color: $secondary100;
+            font-family: $AvenitLT;
         }
 
         h3 {
@@ -136,6 +152,8 @@
             margin: $sm 0;
             font-size: calc($xx + 10px);
             font-weight: 400;
+            font-family: $Recoleta;
+            line-height: 1.2;
 
             @media (max-width: 480px) {
                 font-size: calc($lg + 2px);
@@ -144,6 +162,8 @@
 
         p {
             text-align: justify;
+            font-family: $AvenitLT;
+            line-height: 1.7;
         }
     }
 
@@ -196,16 +216,24 @@
         h2 {
             color: $secondary300;
             font-size: $sm;
+            font-family: $AvenitLT;
         }
 
         h3 {
             margin: $sm 0;
             font-size: calc($xx + 10px);
             font-weight: 400;
+            font-family: $Recoleta;
+            line-height: 1.2;
 
             @media (max-width: 480px) {
                 font-size: calc($lg + 2px);
             }
+        }
+
+        p {
+            font-family: $AvenitLT;
+            line-height: 1.7;
         }
 
         a {
@@ -217,6 +245,7 @@
             border-radius: 10px;
             font-size: $sm;
             margin-top: $xx;
+            font-family: $AvenitLT;
         }
 
         figure {
@@ -252,12 +281,15 @@
         h2 {
             color: $secondary300;
             font-size: $sm;
+            font-family: $AvenitLT;
         }
 
         h3 {
             margin: $sm 0;
             font-size: calc($xx + 10px);
             font-weight: 400;
+            font-family: $Recoleta;
+            line-height: 1.2;
 
             @media (max-width: 480px) {
                 font-size: calc($lg + 2px);
@@ -302,13 +334,16 @@
                             font-size: $sm;
                             display: block;
                             margin-top: $sm;
+                            font-family: $Recoleta;
                         }
                     }
 
                     h4 {
+                        font-family: $AvenitLT;
                         color: $secondary100;
                         font-size: 1.37rem;
                         margin: $sm 0;
+                        font-weight: 500;
                     }
 
                     .read-more {
@@ -317,6 +352,7 @@
                         gap: 8px;
                         font-size: $base;
                         color: $secondary100;
+                        font-family: $Inter;
                     }
                 }
             }

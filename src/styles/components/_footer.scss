@@ -27,6 +27,7 @@ footer {
 
         >* {
             padding: $lg $xl;
+            font-family: $AvenitLT;
         }
 
         .logo {
@@ -64,7 +65,7 @@ footer {
                 margin: $lg 0;
 
                 @media (min-width: 750px) {
-                    max-width: 233px;
+                    max-width: 243px;
                 }
             }
         }

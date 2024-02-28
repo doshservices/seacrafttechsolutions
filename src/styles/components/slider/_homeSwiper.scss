@@ -98,6 +98,9 @@
                 font-size: 4.2rem;
                 max-width: 424px;
                 margin: $thin 0;
+                font-family: $Recoleta;
+                font-weight: 400;
+                line-height: 1.2;
 
                 @media (max-width: 850px) {
                     font-size: 3rem;
@@ -115,11 +118,15 @@
             h2 {
                 font-size: $sm;
                 font-weight: 400;
+                font-family: $Ubuntu;
+                margin-bottom: $base;
             }
 
             p {
                 max-width: 289px;
                 line-height: 1.7;
+                font-family: $AvenitLT;
+                font-weight: 300;
 
                 @media (max-width: 700px) {
                     max-width: 100%;
@@ -135,6 +142,7 @@
                 display: block;
                 width: fit-content;
                 margin-top: $xx;
+                font-family: $AvenitLT;
 
                 @media (max-width: 600px) {
                     margin: $xx auto 0 auto;
