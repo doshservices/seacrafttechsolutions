@@ -50,7 +50,7 @@ const Service: FC = () => {
             </svg>
 
             <div id="service__description">
-                <div>
+                <div className="icon-name">
                     <img src={service?.pageIcon} alt="" />
                     <h2>{service?.name}</h2>
                 </div>

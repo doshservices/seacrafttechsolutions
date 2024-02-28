@@ -13,6 +13,9 @@
             max-width: 691px;
             font-size: 4.2rem;
             margin-bottom: $lg;
+            font-family: $Recoleta;
+            font-weight: 400;
+            line-height: 1.2;
 
             @media (max-width: 800px) {
                 font-size: $xxl;
@@ -29,7 +32,8 @@
             text-align: justify;
             max-width: 691px;
             margin: $base 0;
-            line-height: 1.85;
+            line-height: 1.7;
+            font-family: $AvenitLT;
 
             @media (max-width: 480px) {
                 text-align: center;

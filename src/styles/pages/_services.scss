@@ -37,6 +37,7 @@
     h2 {
         font-size: $sm;
         color: $secondary100;
+        font-family: $AvenitLT;
 
         @media (max-width: 480px) {
             text-align: center;
@@ -48,6 +49,8 @@
         font-size: calc($xx + 10px);
         font-weight: 400;
         max-width: 344px;
+        font-family: $Recoleta;
+        line-height: 1.2;
 
         @media (max-width: 480px) {
             font-size: calc($lg + 2px);
@@ -59,6 +62,7 @@
     p {
         text-align: justify;
         line-height: 1.7;
+        font-family: $AvenitLT;
 
         @media (max-width: 480px) {
             text-align: center;
@@ -98,6 +102,7 @@
             figcaption {
                 font-size: $base;
                 margin-top: $sm;
+                font-family: $Recoleta;
             }
 
         }

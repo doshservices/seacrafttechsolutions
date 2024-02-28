@@ -11,6 +11,8 @@
         h2 {
             font-size: $sm;
             margin-bottom: $base;
+            font-family: $AvenitLT;
+            font-weight: 400;
 
             @media (max-width: 480px) {
                 text-align: center;
@@ -21,6 +23,9 @@
             max-width: 539px;
             font-size: 4.2rem;
             margin-bottom: $lg;
+            font-family: $Recoleta;
+            line-height: 1.2;
+            font-weight: 400;
 
             @media (max-width: 800px) {
                 font-size: $xxl;
@@ -37,7 +42,8 @@
             text-align: justify;
             max-width: 690px;
             margin: $base 0;
-            line-height: 1.85;
+            line-height: 1.7;
+            font-family: $AvenitLT;
 
             @media (max-width: 480px) {
                 text-align: center;
@@ -79,6 +85,7 @@
             font-size: calc($xx + 10px);
             font-weight: 400;
             max-width: 344px;
+            font-family: $Recoleta;
 
             @media (max-width: 480px) {
                 font-size: calc($lg + 2px);
@@ -93,7 +100,8 @@
             flex-shrink: 0;
             max-width: 291px;
             border-right: 1px solid $secondary100;
-            padding: 10px $xl;
+            padding: 10px 1.8rem;
+            font-family: $AvenitLT;
 
             @media (max-width: 950px) {
                 padding: 10px 0;
@@ -108,7 +116,8 @@
             text-align: justify;
             font-size: $base;
             border-right: 1px solid $secondary100;
-            padding-right: $xl;
+            padding-right: 1.8rem;
+            font-family: $AvenitLT;
 
             @media (max-width: 950px) {
                 padding-right: $base;
@@ -128,7 +137,8 @@
             padding: 10px 20px;
             border-radius: 6px;
             flex-shrink: 0;
-            margin-right: $xl;
+            margin-right: 1.8rem;
+            font-family: $AvenitLT;
 
             @media (max-width: 950px) {
                 margin-right: $base;
