@@ -201,7 +201,86 @@
     }
 
     .values {
-        border: 1px solid $secondary100;
+        border-left: 1px solid $secondary100;
+        border-top: 1px solid $secondary100;
+
+        &:nth-child(n + 5) {
+            border-bottom: 1px solid $secondary100;
+        }
+
+        &:nth-child(3) {
+            border-left: 1px solid $secondary100;
+
+            @media (max-width: 1000px) {
+                border-right: 1px solid $secondary100;
+                border-left: 0;
+            }
+
+            @media (max-width: 800px) {
+                border-right: 0;
+                border-left: 1px solid $secondary100;
+            }
+        }
+
+        &:nth-child(2) {
+            @media (max-width: 1000px) {
+                border-right: 1px solid $secondary100;
+            }
+        }
+
+        &:nth-child(4) {
+            border-right: 1px solid $secondary100;
+
+            @media (max-width: 1000px) {
+                border-right: 0;
+            }
+
+            @media (max-width: 800px) {
+                border-right: 1px solid $secondary100 !important;
+            }
+        }
+
+        &:nth-child(5) {
+            @media (max-width: 1000px) {
+                border-bottom: 0;
+                border-right: 1px solid $secondary100;
+            }
+
+            @media (max-width: 800px) {
+                border-right: 0;
+            }
+        }
+
+
+        &:nth-child(6) {
+            border-left: 1px solid $secondary100;
+
+            @media (max-width: 1000px) {
+                border-right: 1px solid $secondary100;
+                border-bottom: 1px solid $secondary100;
+                border-left: 1px solid $secondary100;
+            }
+
+            @media (max-width: 800px) {
+                border-bottom: 0;
+            }
+        }
+
+        &:nth-child(7) {
+            @media (max-width: 600px) {
+                border-bottom: 0;
+            }
+        }
+
+        &:nth-child(8) {
+            border-right: 1px solid $secondary100;
+        }
+
+        @media (max-width: 600px) {
+            &:nth-child(odd) {
+                border-right: 1px solid $secondary100;
+            }
+        }
     }
 }
 
@@ -257,6 +336,7 @@
         margin: 0;
         padding: $xx $base;
         margin-bottom: $xl;
+        gap: $lg;
     }
 
     h2 {

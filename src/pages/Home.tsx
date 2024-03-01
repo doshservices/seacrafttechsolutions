@@ -10,6 +10,7 @@ import chartBgDesktop from "../assets/Seacraft Asset/Images/chart-bg-desktop.png
 import { latestNews } from "../data/latestNews";
 import { latestUpdate } from "../utils/interface";
 import { useWindowWidth } from "../utils/useWindowWidth";
+import Marquee from "react-fast-marquee";
 
 const Home: FC = () => {
     const windowWidth = useWindowWidth()
@@ -62,7 +63,9 @@ const Home: FC = () => {
                 <p>At Seacraft Technology Solutions Limited, we believe in the power of collaboration. By joining forces with industry leaders, we leverage collective expertise and resources to deliver cutting-edge solutions and unparalleled service. Together, we pave the way for transformative advancements in the subsea and marine sector, shaping a brighter future for all.</p>
             </section>
             <figure className="patners-img" >
-                <img src={patners} width="100%" alt="" />
+                <Marquee>
+                    <img src={patners} width="100%" alt="" />
+                </Marquee>
             </figure>
             <section className="charts">
                 <img src={windowWidth > 500 ? chartBgDesktop : chartBg} alt="background-img" className="background" loading="lazy" />

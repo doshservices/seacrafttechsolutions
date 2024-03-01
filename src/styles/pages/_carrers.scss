@@ -66,7 +66,13 @@
                 column-gap: 3rem;
                 row-gap: $base;
                 padding: $lg 0;
-                border: 1px solid $secondary100;
+                border-right: 1px solid $secondary100;
+                border-left: 1px solid $secondary100;
+                border-top: 1px solid $secondary100;
+
+                &:last-child {
+                    border-bottom: 1px solid $secondary100;
+                }
 
                 @media (max-width: 950px) {
                     column-gap: $lg;

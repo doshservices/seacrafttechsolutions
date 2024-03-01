@@ -1,7 +1,11 @@
 #service {
     padding: 75px $px-fluid 3rem $px-fluid;
 
-    @media (max-width) {
+    @media (max-width: 650px) {
+        padding: 75px 0 $xl 0;
+    }
+
+    @media (max-width: 850px) {
         padding-top: 60px;
     }
 
@@ -15,11 +19,32 @@
         border-top: 1px solid hsla(0, 0%, 18%, 0.1);
         border-bottom: 1px solid hsla(0, 0%, 18%, 0.1);
         font-family: $AvenitLT;
+
+        @media (max-width: 850px) {
+            margin-top: 0;
+        }
+
+        @media (max-width: 650px) {
+            padding: 5px $base;
+        }
     }
 
     figure {
+        @media (max-width: 650px) {
+            padding: 0 $base;
+        }
+
         img {
             width: 100%;
+        }
+    }
+
+    .navigate {
+        margin: $base 0;
+        display: block;
+
+        @media (max-width: 650px) {
+            margin: $base auto;
         }
     }
 
@@ -27,9 +52,28 @@
         display: grid;
         grid-template-columns: .5fr 1fr;
 
+        @media (max-width: 650px) {
+            grid-template-columns: 1fr;
+        }
+
         >* {
             border: 1px solid $secondary100;
             padding: 3.5rem $xx;
+
+            &:nth-child(1) {
+                border-top: 1px solid $secondary100;
+                border-bottom: 1px solid $secondary100;
+            }
+
+            @media (max-width: 650px) {
+                padding: $base $px-fluid !important;
+            }
+
+            @media (max-width: 650px) {
+                padding: $base $px-fluid;
+                border: none;
+                border-bottom: 1px solid $secondary100;
+            }
 
             h2 {
                 max-width: 378px;
@@ -40,15 +84,27 @@
                 line-height: 1.2;
                 font-family: $Recoleta;
 
+                @media (max-width: 650px) {
+                    max-width: 100%;
+                    text-align: center;
+                }
+
                 @media (max-width: 480px) {
                     font-size: calc($lg + 2px);
                 }
+            }
+
+            img {
+                margin: 0 auto;
+                display: block;
+                height: 71px;
             }
 
             p {
                 font-size: $base;
                 line-height: 1.8;
                 font-family: $AvenitLT;
+                text-align: justify;
             }
         }
 
@@ -57,6 +113,16 @@
             flex-direction: column;
             gap: $lg;
             justify-content: center;
+            border-left: 0;
+
+            @media (max-width: 650px) {
+                border-top: 0;
+                border-left: 1px solid $secondary100;
+            }
+
+            @media (max-width: 480px) {
+                border-left: 0;
+            }
         }
     }
 }

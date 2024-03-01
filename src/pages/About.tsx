@@ -11,6 +11,27 @@ const About: FC = () => {
     const [showVision, setShowVision] = useState<boolean>(false)
     const [showHealth, setShowHealth] = useState<boolean>(false)
     const [showAssurance, setShowAssurance] = useState<boolean>(false)
+    // const [activeLink, setActiveLink] = useState('');
+
+    // useEffect(() => {
+    //     const handleScroll = () => {
+    //         const sections = document.querySelectorAll<any>('section');
+    //         sections.forEach(section => {
+    //             const sectionTop = section.offsetTop;
+    //             const sectionHeight = section.clientHeight;
+    //             if (window.pageYOffset >= sectionTop - sectionHeight / 3) {
+    //                 setActiveLink(section.getAttribute('id'));
+    //             }
+    //         });
+    //     };
+
+    //     window.addEventListener('scroll', handleScroll);
+
+    //     // Clean up the event listener
+    //     return () => {
+    //         window.removeEventListener('scroll', handleScroll);
+    //     };
+    // }, []);
 
     return (
         <>
@@ -19,6 +40,20 @@ const About: FC = () => {
                 paragraph2="Our expert team combines cutting-edge technology with extensive industry experience to deliver comprehensive services tailored to meet the evolving needs of our clients. From marine operations to specialized tooling and autonomous vehicles, we are dedicated to exceeding expectations and driving success in the offshore industry."
                 className="about-hero"
             />
+            {/* <nav>
+                <ul>
+                    <li>
+                        <a href="#section1" className={activeLink === 'section1' ? 'active' : ''}>
+                            Section 1
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#section2" className={activeLink === 'section2' ? 'active' : ''}>
+                            Section 2
+                        </a>
+                    </li>
+                </ul>
+            </nav> */}
             {windowWidth > 600 ?
                 <div className="mission__vision__desktop">
                     <figure>
@@ -74,6 +109,7 @@ const About: FC = () => {
                     }
                 </>
             }
+
             <div className="coperate-values">
                 <div>
                     <h3>VALUES</h3>
@@ -91,6 +127,12 @@ const About: FC = () => {
                     </div>
                 )}
             </div>
+            {/* <section id="section1">
+                <h2>Section 1</h2>
+            </section>
+            <section id="section2">
+                <h2>Section 2</h2>
+            </section> */}
             <section className="content__policy">
                 <h2>OUR CONTENT POLICY</h2>
                 <h3>Local Content Policy</h3>
