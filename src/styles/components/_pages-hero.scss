@@ -41,3 +41,33 @@
         }
     }
 }
+
+.about__section__links {
+    background: $primary100;
+    display: flex;
+    justify-content: space-between;
+    gap: $base;
+    margin: 0 clamp($base, 8vw, calc($base * 20));
+    padding: 1.2rem $xl;
+    outline: 1px solid $primary100;
+    top: 7rem;
+    position: sticky;
+    transform: translateY(-30px);
+
+    a {
+        display: inline-block;
+        color: $secondary200;
+        font-size: $sm;
+        font-family: $Recoleta;
+        text-transform: uppercase;
+        text-align: center;
+
+        @media (max-width: 980px) {
+            font-size: $xs;
+        }
+    }
+
+    .active {
+        color: $light100;
+    }
+}

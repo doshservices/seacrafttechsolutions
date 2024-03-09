@@ -12,10 +12,15 @@
 
 .mission__vision__desktop {
     display: flex;
-    padding: $xxl 0 $xxl $xx;
+    padding: 5rem 0 $xxl $xx;
     margin: 0 $px-fluid;
     border-right: 1px solid $secondary100;
     border-left: 1px solid $secondary100;
+    margin-top: -57px;
+
+    @media (max-width: 830px) {
+        margin-top: -74px;
+    }
 
     @media (max-width: 600px) {
         margin: 0;

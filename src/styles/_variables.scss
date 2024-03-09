@@ -26,14 +26,14 @@ $px-fluid: clamp($base, 5vw, calc($base * 20));
     font-family: 'Recoleta';
     font-style: normal;
     font-weight: normal;
-    src: url('/public/recoleta-regulardemo.otf');
+    src: url('/recoleta-regulardemo.otf');
 }
 
 @font-face {
     font-family: 'AvenirLT';
     font-style: normal;
     font-weight: normal;
-    src: url('/public/AvenirLTProBook.otf');
+    src: url('/AvenirLTProBook.otf');
 }
 
 $Recoleta: "Recoleta", sans-serif, Arial;

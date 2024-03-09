@@ -1,5 +1,5 @@
 import { Hero } from "../components";
-import { FC, useState } from "react";
+import { FC, useState, useEffect } from "react";
 import vision from "../assets/Seacraft Asset/Images/[Downloader.la]-65c6361316a69.jpg"
 import { DropDownWhite } from "../assets";
 import { useWindowWidth } from "../utils/useWindowWidth";
@@ -11,27 +11,26 @@ const About: FC = () => {
     const [showVision, setShowVision] = useState<boolean>(false)
     const [showHealth, setShowHealth] = useState<boolean>(false)
     const [showAssurance, setShowAssurance] = useState<boolean>(false)
-    // const [activeLink, setActiveLink] = useState('');
+    const [activeSection, setActiveSection] = useState<string>('');
 
-    // useEffect(() => {
-    //     const handleScroll = () => {
-    //         const sections = document.querySelectorAll<any>('section');
-    //         sections.forEach(section => {
-    //             const sectionTop = section.offsetTop;
-    //             const sectionHeight = section.clientHeight;
-    //             if (window.pageYOffset >= sectionTop - sectionHeight / 3) {
-    //                 setActiveLink(section.getAttribute('id'));
-    //             }
-    //         });
-    //     };
+    useEffect(() => {
+        function handleScroll() {
+            const sections = document.querySelectorAll('section');
+            const scrollPosition = window.scrollY + 250;
 
-    //     window.addEventListener('scroll', handleScroll);
+            sections.forEach(section => {
+                if (section.offsetTop <= scrollPosition && section.offsetTop + section.offsetHeight > scrollPosition) {
+                    setActiveSection(section.id);
+                }
+            });
+        }
 
-    //     // Clean up the event listener
-    //     return () => {
-    //         window.removeEventListener('scroll', handleScroll);
-    //     };
-    // }, []);
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
 
     return (
         <>
@@ -40,27 +39,23 @@ const About: FC = () => {
                 paragraph2="Our expert team combines cutting-edge technology with extensive industry experience to deliver comprehensive services tailored to meet the evolving needs of our clients. From marine operations to specialized tooling and autonomous vehicles, we are dedicated to exceeding expectations and driving success in the offshore industry."
                 className="about-hero"
             />
-            {/* <nav>
-                <ul>
-                    <li>
-                        <a href="#section1" className={activeLink === 'section1' ? 'active' : ''}>
-                            Section 1
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#section2" className={activeLink === 'section2' ? 'active' : ''}>
-                            Section 2
-                        </a>
-                    </li>
-                </ul>
-            </nav> */}
-            {windowWidth > 600 ?
+            {windowWidth > 800 ?
+                <nav className="about__section__links">
+                    <a className={activeSection === 'vision_and_mission' ? 'active' : ''} href="#vision_and_mission">VISION & MISSION</a>
+                    <a className={activeSection === 'corporate-values' ? 'active' : ''} href="#corporate-values">COPORATE VALUES</a>
+                    <a className={activeSection === 'content__policy' ? 'active' : ''} href="#content__policy">Content Policy</a>
+                    <a className={activeSection === 'health__and__safety' ? 'active' : ''} href="#health__and__safety">HEALTH & SAFETY</a>
+                    <a className={activeSection === 'quality__assurance__policy' ? 'active' : ''} href="#quality__assurance__policy">QUALITY POLICY</a>
+                </nav>
+                : null
+            }
+            {windowWidth > 800 ?
                 <div className="mission__vision__desktop">
                     <figure>
                         <img src={vision} alt="vision and mission" loading="lazy" />
                     </figure>
                     <div>
-                        <section>
+                        <section id="vision_and_mission">
                             <h3>VISION</h3>
                             <p>To be the leading offshore technology solution serviceprovider of choice in Nigeria and the West Africa sub region.</p>
                         </section>
@@ -110,7 +105,7 @@ const About: FC = () => {
                 </>
             }
 
-            <div className="coperate-values">
+            <section id="corporate-values" className="coperate-values">
                 <div>
                     <h3>VALUES</h3>
                     <h5>
@@ -126,20 +121,14 @@ const About: FC = () => {
                         <p>{value.description}</p>
                     </div>
                 )}
-            </div>
-            {/* <section id="section1">
-                <h2>Section 1</h2>
             </section>
-            <section id="section2">
-                <h2>Section 2</h2>
-            </section> */}
-            <section className="content__policy">
+            <section id="content__policy" className="content__policy">
                 <h2>OUR CONTENT POLICY</h2>
                 <h3>Local Content Policy</h3>
                 <p>Seacraft Technology Solutions limited staff, its contractors, supplies, and stakeholders involved in project or operations in Nigeria shall consider local content as an important element in their project and operations delivery.</p>
             </section>
             <div className="about-policy">
-                <section className="health__and__safety">
+                <section id="health__and__safety" className="health__and__safety">
                     <h2>Health and Safety Policy</h2>
                     <p>
                         Seacraft Technology Solutions is committed to providing safe and healthy working conditions for the prevention of work-related injury that is appropriate to the purpose, size, and context of the organization and to the specific nature of its Health & Safety risks and opportunities.
@@ -176,7 +165,7 @@ const About: FC = () => {
                         </svg>
                     </button>
                 </section>
-                <section className="quality">
+                <section id="quality__assurance__policy" className="quality">
                     <h2>Quality Assurance Policy</h2>
                     <p>
                         The purpose of the policy is to confirm Seacraft Technology Solutions is commitment to meeting quality standards expected by customers in the delivery of products and/or services. This Policy applies to all areas of the Company’s operations at all its worksite locations.
