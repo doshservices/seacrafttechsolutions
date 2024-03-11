@@ -6,7 +6,7 @@ import slide4 from "../assets/Seacraft Asset/Images/steptodown.com807566.jpg.png
 export const slides = [
     {
         topic: "ABOUT SEACRAFT",
-        name: "Indigenous, nnovative & Collaborative.",
+        name: "Indigenous, Innovative & Collaborative.",
         description: "We are a Nigeria indigenous Subsea and Marine engineering company dedicated to providing quality, and leading edge innovative technological driven services",
         action: "About Seacraft",
         background: slide1

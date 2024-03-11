@@ -32,6 +32,12 @@
     figure {
         @media (max-width: 650px) {
             padding: 0 $base;
+            height: 300px;
+
+            img {
+                min-height: 100%;
+                object-fit: cover;
+            }
         }
 
         img {

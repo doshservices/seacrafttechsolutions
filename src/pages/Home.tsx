@@ -3,14 +3,14 @@ import { Link } from "react-router-dom";
 import { services } from "../data/services";
 import { HomeSlider } from "../components";
 import ArrowLight from "../assets/Icons/arrow-light.svg"
-import patners from "../assets/Icons/Partners.png"
+import patners from "../assets/Seacraft Asset/Images/tmt.svg"
 import chartsImg from "../assets/Seacraft Asset/Images/1707487196965.png"
 import chartBg from "../assets/Seacraft Asset/Images/charts-bg.png"
 import chartBgDesktop from "../assets/Seacraft Asset/Images/chart-bg-desktop.png"
 import { latestNews } from "../data/latestNews";
 import { latestUpdate } from "../utils/interface";
 import { useWindowWidth } from "../utils/useWindowWidth";
-import Marquee from "react-fast-marquee";
+// import Marquee from "react-fast-marquee";
 
 const Home: FC = () => {
     const windowWidth = useWindowWidth()
@@ -63,9 +63,9 @@ const Home: FC = () => {
                 <p>At Seacraft Technology Solutions Limited, we believe in the power of collaboration. By joining forces with industry leaders, we leverage collective expertise and resources to deliver cutting-edge solutions and unparalleled service. Together, we pave the way for transformative advancements in the subsea and marine sector, shaping a brighter future for all.</p>
             </section>
             <figure className="patners-img" >
-                <Marquee>
-                    <img src={patners} width="100%" alt="" />
-                </Marquee>
+                {/* <Marquee>
+                </Marquee> */}
+                <img src={patners} alt="" />
             </figure>
             <section className="charts">
                 <img src={windowWidth > 500 ? chartBgDesktop : chartBg} alt="background-img" className="background" loading="lazy" />

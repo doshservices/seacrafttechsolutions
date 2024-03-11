@@ -52,9 +52,9 @@
             color: $light100;
             border: 1px solid $light100;
             border-radius: 6px;
-            padding: 10px 20px;
+            padding: 12px 20px;
             display: block;
-            margin: 0 auto;
+            margin: 3rem auto $base auto;
             width: fit-content;
             font-family: $Ubuntu;
         }
@@ -106,13 +106,13 @@
                 grid-template-columns: 1fr 1fr;
             }
 
-            @media (max-width: 480px) {
+            @media (max-width: 550px) {
                 border-left: 1px solid $secondary100;
                 grid-template-columns: 1fr;
             }
 
             >div {
-                padding: $base $base 4rem $base;
+                padding: 1.8rem $base 4rem $base;
                 position: relative;
                 border-left: 1px solid $secondary100;
                 border-bottom: 1px solid $secondary100;
@@ -127,6 +127,8 @@
                     font-size: calc($base + 2px);
                     font-family: $AvenitLT;
                     font-weight: 600;
+                    min-height: 50px;
+                    line-height: 1.5;
                 }
 
                 p {
@@ -186,18 +188,23 @@
 
     .patners-img {
         margin: 0 $px-fluid;
-        padding: 1.8rem;
+        padding: $base;
         display: block;
+        text-align: center;
 
-        @media (max-width: 480px) {
-            margin: 0;
-            padding: 0;
-            margin-bottom: $base;
-
-            img {
-                height: 50px;
-            }
+        img {
+            height: 77px;
         }
+
+        // @media (max-width: 480px) {
+        //     margin: 0;
+        //     padding: 0;
+        //     margin-bottom: $base;
+
+        //     img {
+        //         height: 50px;
+        //     }
+        // }
     }
 
     .charts {

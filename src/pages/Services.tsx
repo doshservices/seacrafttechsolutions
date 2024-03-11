@@ -12,15 +12,12 @@ const Services: FC = () => {
             }
         };
 
-        // Initial width calculation
         if (elementRef.current) {
             setWidth(elementRef.current.offsetWidth);
         }
 
-        // Event listener for window resize
         window.addEventListener('resize', handleResize);
 
-        // Cleanup function to remove the event listener
         return () => {
             window.removeEventListener('resize', handleResize);
         };
@@ -39,7 +36,7 @@ const Services: FC = () => {
                 <div className="services__type">
                     {services.slice(0, 12).map((service: any, index: number) =>
                         <figure ref={elementRef} className="first" key={index}>
-                            <img src={service.logo} alt="" loading="lazy" />
+                            <img src={service.logo} alt={service.name} loading="lazy" />
                             <figcaption>{service.name}</figcaption>
                         </figure>
                     )}

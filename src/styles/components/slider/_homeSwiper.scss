@@ -127,9 +127,11 @@
                 line-height: 1.7;
                 font-family: $AvenitLT;
                 font-weight: 300;
+                text-align: justify;
 
                 @media (max-width: 700px) {
                     max-width: 100%;
+                    text-align: center;
                 }
             }
 
@@ -138,7 +140,7 @@
                 color: $light100;
                 background: $secondary100;
                 border-radius: 12px;
-                padding: 10px 20px;
+                padding: 13px 20px;
                 display: block;
                 width: fit-content;
                 margin-top: $xx;

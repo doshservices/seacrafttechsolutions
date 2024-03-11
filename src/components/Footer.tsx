@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { Link } from "react-router-dom";
 import { FooterLogo } from "../assets";
-import { emailAddress } from "../utils/variables";
+// import { emailAddress } from "../utils/variables";
 import { useWindowWidth } from "../utils/useWindowWidth";
 
 export const Footer: FC = () => {
@@ -15,20 +15,26 @@ export const Footer: FC = () => {
                 <section className="address">
                     <h4>Main Office Address</h4>
                     <address>
-                        3791 Shai Huluds Crescent,
-                        Avenger’s Corner, Lagos, Nigeria
+                        Apartment 1c, Grenadine Estate,
+                        Monastery Road, Sangotedo, Lagos State.
                     </address>
-                    <a href={`mailto:${emailAddress}`} target="_blank" rel="noopener noreferrer">{emailAddress}</a>
+                    <address>
+                        KM 1 Rumuokwurusi/Igbo Etche Road,
+                        Port-Hacourt, Rivers State, Nigeria.
+                    </address>
+                    {/* <a href={`mailto:${emailAddress}`} target="_blank" rel="noopener noreferrer">{emailAddress}</a> */}
                 </section>
                 <section className="links">
-                    <Link to="">About</Link>
-                    <Link to="">Specialization</Link>
-                    <Link to="">Project</Link>
-                    <Link to="">Project</Link>
-                    <Link to="">Polices</Link>
-                    <Link to="">Sustainability</Link>
-                    <Link to="">Contact</Link>
-                    <Link to="">Contact</Link>
+                    <div>
+                        <Link to="/about">About</Link>
+                        <Link to="">Specialization</Link>
+                        <Link to="">Project</Link>
+                    </div>
+                    <div>
+                        <Link to="">Polices</Link>
+                        <Link to="">Sustainability</Link>
+                        <Link to="/contact">Contact</Link>
+                    </div>
                 </section>
                 {windowWidth >= 850 ?
                     <div></div>
