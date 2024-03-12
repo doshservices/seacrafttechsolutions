@@ -30,12 +30,12 @@ export const Footer: FC = () => {
                 <section className="links">
                     <div>
                         <Link to="/about">About</Link>
-                        <Link to="">Specialization</Link>
-                        <Link to="">Project</Link>
+                        <a>Specialization</a>
+                        <Link to="/project">Project</Link>
                     </div>
                     <div>
-                        <Link to="">Polices</Link>
-                        <Link to="">Sustainability</Link>
+                        <a>Polices</a>
+                        <a>Sustainability</a>
                         <Link to="/contact">Contact</Link>
                     </div>
                 </section>

@@ -96,7 +96,7 @@ const Home: FC = () => {
                                     <span role="time">{news.date}</span>
                                     <h4>{news.title}</h4>
                                 </div>
-                                <Link className="read-more" to="#">
+                                <a className="read-more">
                                     <span>Read More</span>
                                     <svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <g clipPath="url(#clip0_121_39)">
@@ -108,7 +108,7 @@ const Home: FC = () => {
                                             </clipPath>
                                         </defs>
                                     </svg>
-                                </Link>
+                                </a>
                             </div>
                         </div>
                     )}

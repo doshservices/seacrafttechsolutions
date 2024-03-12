@@ -1,0 +1,122 @@
+.project {
+    margin: 0 $px-fluid;
+    padding: 8rem $xl 3rem $xl;
+    position: relative;
+
+    @media (max-width: 700px) {
+        padding: 8rem $base $xl $base;
+        margin: 0;
+    }
+
+    &::after,
+    &::before {
+        background: $secondary100;
+        width: 1px;
+        position: absolute;
+        content: "";
+        display: block;
+        pointer-events: none;
+        top: 0;
+        bottom: 0;
+
+        @media (max-width: 700px) {
+            display: none;
+        }
+    }
+
+    &::after {
+        right: 0;
+    }
+
+    &::before {
+        left: 0;
+    }
+
+    >h2 {
+        font-size: $sm;
+        color: $secondary100;
+        font-family: $AvenitLT;
+
+        @media (max-width: 700px) {
+            text-align: center;
+        }
+    }
+
+    >h3 {
+        margin: $sm 0;
+        font-size: calc($xx + 10px);
+        font-weight: 400;
+        font-family: $Recoleta;
+        line-height: 1.2;
+
+        @media (max-width: 700px) {
+            font-size: calc($lg + 2px);
+            text-align: center;
+            padding: 0 $base;
+            margin: $sm auto;
+        }
+    }
+
+    >p {
+        text-align: justify;
+        line-height: 1.7;
+        font-family: $AvenitLT;
+        margin-bottom: $xl;
+
+        @media (max-width: 700px) {
+            text-align: center;
+            padding: 0 $base;
+        }
+    }
+
+    &s {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        @media (max-width: 700px) {
+            grid-template-columns: 1fr;
+            gap: $base;
+        }
+
+        article {
+            border: 1px solid $secondary100;
+            padding: $md;
+
+            @media (max-width: 700px) {
+                padding: $sm;
+            }
+
+            h4 {
+                font-family: $Recoleta;
+                font-size: $sm;
+                margin: $base 0 $md 0;
+            }
+
+            h5 {
+                font-size: calc($base + 6px);
+                font-family: $AvenitLT;
+                color: $secondary100;
+                font-weight: 500;
+            }
+
+            p {
+                text-align: justify;
+                font-size: $base;
+                font-family: $AvenitLT;
+                line-height: 1.9;
+                margin-bottom: $base;
+                margin-top: 8px;
+            }
+
+            .read-more {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                font-size: $base;
+                color: $secondary100;
+                font-family: $Inter;
+                cursor: pointer;
+            }
+        }
+    }
+}
