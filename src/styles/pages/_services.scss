@@ -87,6 +87,13 @@
             padding: $base;
             border-top: 1px solid $secondary100;
             border-left: 1px solid $secondary100;
+            overflow: hidden;
+
+            &:hover {
+                img {
+                    transform: scale(1.15);
+                }
+            }
 
             &:nth-child(n + 10) {
                 border-bottom: 1px solid $secondary100;
@@ -148,11 +155,12 @@
 
             img {
                 width: 100%;
+                transition: all .3s ease;
             }
 
             figcaption {
                 font-size: $base;
-                margin-top: $sm;
+                margin-top: $md;
                 font-family: $Recoleta;
 
                 @media (max-width: 480px) {
@@ -178,6 +186,13 @@
             border-bottom: 1px solid $secondary100;
             border-left: 1px solid $secondary100;
             border-right: 1px solid $secondary100;
+            overflow: hidden;
+
+            &:hover {
+                img {
+                    transform: scale(1.15);
+                }
+            }
 
             &:nth-child(1) {
                 border-right: 0;
@@ -194,12 +209,14 @@
 
             img {
                 width: 100%;
+                transition: all .3s ease;
             }
 
             figcaption {
                 font-size: $base;
                 margin-top: $sm;
                 font-family: $Recoleta;
+                margin-top: $md;
 
                 @media (max-width: 480px) {
                     font-size: $sm;

@@ -47,6 +47,7 @@ const Home: FC = () => {
                             <h4>{service.name}</h4>
                             <p>{service.briefDescription}</p>
                             <Link className="link" to={`${service.url}`}>
+                                <span>Learn More</span>
                                 <img src={ArrowLight} alt="" />
                             </Link>
                         </div>

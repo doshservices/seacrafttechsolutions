@@ -142,7 +142,6 @@
     margin: 0 $px-fluid;
     padding: 3.5rem $xx;
     background: $primary200;
-    color: $light100;
 
     @media (max-width: 1000px) {
         grid-template-columns: 1fr 1fr 1fr;
@@ -172,12 +171,16 @@
         margin: $sm 0;
         font-size: calc($base + 2px);
         font-family: $AvenitLT;
+        color: $light100;
+        transition: all .3s ease;
     }
 
     h5 {
         margin: $xxs 0;
         font-size: calc($xx + 10px);
         font-weight: 400;
+        color: $light100;
+        transition: all .3s ease;
 
         @media (max-width: 480px) {
             font-size: calc($lg + 2px);
@@ -189,10 +192,19 @@
         text-align: justify;
         margin-top: 1.5rem;
         font-family: $AvenitLT;
+        color: $light100;
     }
 
     div {
         padding: $lg;
+
+        &:hover {
+
+            h4,
+            p {
+                color: $primary100;
+            }
+        }
 
         &:nth-child(1) {
             @media (max-width: 480px) {
@@ -204,6 +216,10 @@
     .values {
         border-left: 1px solid $secondary100;
         border-top: 1px solid $secondary100;
+
+        &:hover {
+            background: $light100;
+        }
 
         &:nth-child(n + 5) {
             border-bottom: 1px solid $secondary100;

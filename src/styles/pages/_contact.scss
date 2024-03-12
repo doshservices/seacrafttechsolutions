@@ -5,11 +5,27 @@
         padding: 60px 0 $xx 0;
     }
 
+    .email-address {
+        font-size: calc($base + 10px);
+        font-family: $AvenitLT;
+        text-align: center;
+        line-height: 1.7;
+        padding: 1.4rem $base;
+
+        @media (max-width: 700px) {
+            font-size: $md;
+        }
+
+        a {
+            color: $secondary200;
+            word-wrap: break-word;
+        }
+    }
+
     &__address {
         border: 1px solid $secondary100;
         display: flex;
         justify-content: space-between;
-        margin-top: $xl;
 
         @media (max-width: 720px) {
             flex-wrap: wrap;
@@ -20,29 +36,83 @@
             border-left: 0;
         }
 
-        div,
+        section,
         form {
             flex-grow: 1;
             flex-basis: 350px;
 
-            img {
-                width: 100%;
-                min-height: 100%;
-            }
+            // img {
+            //     width: 100%;
+            //     min-height: 100%;
+            // }
         }
 
-        div {
-            padding: $base;
+        section {
+            padding: $xl ;
             border-right: 1px solid $secondary100;
             overflow: hidden;
+            display: flex;
+            flex-direction: column;
+
+            h3 {
+                font-size: calc($base + 10px);
+                font-family: $AvenitLT;
+                line-height: 1.7;
+                font-weight: 400;
+            }
 
             @media (max-width: 720px) {
                 border-right: 0;
             }
+
+            .wrapper {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                flex-grow: 1;
+
+                .address {
+                    margin-top: $lg;
+
+                    h4 {
+                        font-size: calc($base + 2px);
+                        font-family: $AvenitLT;
+                        font-weight: 400;
+                        margin-bottom: 1.8rem;
+                    }
+
+                    >div {
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: $lg;
+
+                        figure {
+                            flex-basis: 150px;
+                            flex-grow: 1;
+
+                            @media (max-width: 720px) {
+                                img {
+                                    width: 100%;
+                                }
+                            }
+                        }
+
+                        address {
+                            flex-grow: 1;
+                            flex-basis: 250px;
+                            font-size: $base;
+                            font-style: normal;
+                            font-family: $AvenitLT;
+                            line-height: 2;
+                            font-size: $base;
+                        }
+                    }
+                }
+            }
         }
 
         form {
-            padding: $base;
+            padding: $xl $base;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -68,6 +138,7 @@
                     padding: $sm $tiny;
                     font-size: $base;
                     width: 100%;
+                    background-color: transparent;
 
                     &:focus {
                         outline: none;
@@ -76,6 +147,7 @@
 
                 textarea {
                     height: 160px;
+                    padding-top: $lg;
                 }
             }
 

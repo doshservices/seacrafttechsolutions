@@ -141,8 +141,49 @@
 
                 .link {
                     position: absolute;
-                    bottom: -4px;
+                    bottom: 0;
                     right: 0;
+                    max-width: 40px;
+                    overflow: hidden;
+                    background: $secondary100;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    font-size: $sm;
+                    color: $light100;
+                    transition: all .4s ease;
+                    height: 35px;
+
+                    span {
+                        display: inline-block;
+                        font-family: $AvenitLT;
+                        font-weight: 300;
+                        width: 0;
+                        overflow: hidden;
+                        transition: all .3s ease;
+                    }
+
+                    img {
+                        max-height: 100%;
+                        min-height: 100%;
+                        min-width: 40px;
+                        object-fit: cover;
+                    }
+                }
+
+                &:hover {
+                    .link {
+                        @media (min-width: 780px) {
+                            width: 100%;
+                            max-width: 100%;
+                            overflow: unset;
+
+                            span {
+                                width: auto;
+                                padding-left: $base;
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -266,7 +307,7 @@
         }
 
         a {
-            padding: 10px 20px;
+            padding: 12px 20px;
             display: block;
             background: $secondary100;
             width: fit-content;
@@ -348,6 +389,7 @@
                 flex-basis: 200px;
                 padding: $base;
                 border-right: 1px solid $secondary100;
+                overflow: hidden;
 
                 &:last-child {
                     border-right: 0;
@@ -372,8 +414,16 @@
                 }
 
                 figure {
+
                     img {
                         width: 100%;
+                        transition: all .3s ease;
+                    }
+
+                    &:hover {
+                        img {
+                            transform: scale(1.15);
+                        }
                     }
                 }
 
@@ -388,7 +438,7 @@
                         &[role="time"] {
                             font-size: $sm;
                             display: block;
-                            margin-top: $sm;
+                            margin-top: $md;
                             font-family: $Recoleta;
                         }
                     }
