@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { Link } from "react-router-dom";
-import { FooterLogo } from "../assets";
+import { FooterLogo, FooterMobileLogo } from "../assets";
 // import { emailAddress } from "../utils/variables";
 import { useWindowWidth } from "../utils/useWindowWidth";
 
@@ -10,10 +10,13 @@ export const Footer: FC = () => {
         <footer>
             <div className="wrapper">
                 <div className="logo">
-                    <FooterLogo />
+                    {windowWidth >= 750 ?
+                        <FooterLogo />
+                        : <FooterMobileLogo />
+                    }
                 </div>
                 <section className="address">
-                    <h4>Main Office Address</h4>
+                    <h4>Office Address</h4>
                     <address>
                         Apartment 1c, Grenadine Estate,
                         Monastery Road, Sangotedo, Lagos State.

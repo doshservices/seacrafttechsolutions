@@ -17,12 +17,9 @@
             font-weight: 400;
             line-height: 1.2;
 
-            @media (max-width: 800px) {
+            @media (max-width: 700px) {
                 font-size: $xxl;
                 margin-bottom: $xx;
-            }
-
-            @media (max-width: 480px) {
                 font-size: calc($lg + 2px);
                 text-align: center;
             }
@@ -35,7 +32,7 @@
             line-height: 1.7;
             font-family: $AvenitLT;
 
-            @media (max-width: 480px) {
+            @media (max-width: 700px) {
                 text-align: center;
             }
         }

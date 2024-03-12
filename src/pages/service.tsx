@@ -67,7 +67,7 @@ const Service: FC = () => {
 
             <div id="service__description">
                 <div className="icon-name">
-                    <img src={service?.pageIcon} alt="" />
+                    <img src={service?.pageIcon} alt={service?.name} />
                     <h2>{service?.name}</h2>
                 </div>
                 <div className="description">

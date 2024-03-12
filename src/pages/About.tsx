@@ -1,14 +1,14 @@
 import { Hero } from "../components";
 import { FC, useState, useEffect } from "react";
 import vision from "../assets/Seacraft Asset/Images/[Downloader.la]-65c6361316a69.jpg"
-import { DropDownWhite } from "../assets";
+// import { DropDownWhite } from "../assets";
 import { useWindowWidth } from "../utils/useWindowWidth";
 import { values } from "../data/values";
 import { coreValues } from "../utils/interface";
 
 const About: FC = () => {
     const windowWidth = useWindowWidth()
-    const [showVision, setShowVision] = useState<boolean>(false)
+    // const [showVision, setShowVision] = useState<boolean>(false)
     const [showHealth, setShowHealth] = useState<boolean>(false)
     const [showAssurance, setShowAssurance] = useState<boolean>(false)
     const [activeSection, setActiveSection] = useState<string>('');
@@ -74,34 +74,26 @@ const About: FC = () => {
                 </div>
                 :
                 <>
-                    <button onClick={() => setShowVision(!showVision)} className="mission__toggler">
-                        <span>VISION & MISSION</span>
-                        <DropDownWhite />
-                    </button>
-                    {
-                        showVision ?
-                            <div className="mission__vision__mobile">
-                                <section>
-                                    <h3>VISION</h3>
-                                    <p>To be the leading offshore technology solution serviceprovider of choice in Nigeria and the West Africa sub region.</p>
-                                </section>
-                                <figure>
-                                    <img src={vision} alt="vision and mission" loading="lazy" />
-                                </figure>
-                                <section>
-                                    <h3>MISION</h3>
-                                    <p>To deliver customized services that benefit our clients. We achieve this by:</p>
-                                    <ul>
-                                        <li>Running safe and efficient operations</li>
-                                        <li>Leveraging technology and innovative solutions</li>
-                                        <li>Building strong relationships with international OEMs</li>
-                                        <li>Complying with regulatory requirements</li>
-                                        <li>Engaging talented and disciplined people in our operations</li>
-                                    </ul>
-                                </section>
-                            </div>
-                            : null
-                    }
+                    <div className="mission__vision__mobile">
+                        <section>
+                            <h3>VISION</h3>
+                            <p>To be the leading offshore technology solution serviceprovider of choice in Nigeria and the West Africa sub region.</p>
+                        </section>
+                        <figure>
+                            <img src={vision} alt="vision and mission" loading="lazy" />
+                        </figure>
+                        <section>
+                            <h3>MISION</h3>
+                            <p>To deliver customized services that benefit our clients. We achieve this by:</p>
+                            <ul>
+                                <li>Running safe and efficient operations</li>
+                                <li>Leveraging technology and innovative solutions</li>
+                                <li>Building strong relationships with international OEMs</li>
+                                <li>Complying with regulatory requirements</li>
+                                <li>Engaging talented and disciplined people in our operations</li>
+                            </ul>
+                        </section>
+                    </div>
                 </>
             }
 

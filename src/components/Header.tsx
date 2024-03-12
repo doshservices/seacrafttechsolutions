@@ -60,7 +60,7 @@ export const NavBar: FC = () => {
                             : null
                         }
                         <li>
-                            <NavLink onClick={showMenu} to="/sustainability">Sustainability</NavLink>
+                            <a onClick={showMenu}>Sustainability</a>
                         </li>
                         <li>
                             <NavLink onClick={showMenu} to="/contact">Contact Us</NavLink>

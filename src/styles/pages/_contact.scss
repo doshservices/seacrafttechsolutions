@@ -1,7 +1,7 @@
 .contact {
     padding: 6.5rem $px-fluid $xx $px-fluid;
 
-    @media (max-width: 480px) {
+    @media (max-width: 720px) {
         padding: 60px 0 $xx 0;
     }
 
@@ -12,7 +12,7 @@
         line-height: 1.7;
         padding: 1.4rem $base;
 
-        @media (max-width: 700px) {
+        @media (max-width: 720px) {
             font-size: $md;
         }
 
@@ -29,12 +29,10 @@
 
         @media (max-width: 720px) {
             flex-wrap: wrap;
-        }
-
-        @media (max-width: 480px) {
             border-right: 0;
             border-left: 0;
         }
+
 
         section,
         form {
@@ -70,6 +68,7 @@
                 flex-direction: column;
                 justify-content: space-between;
                 flex-grow: 1;
+                row-gap: 2rem;
 
                 .address {
                     margin-top: $lg;
@@ -79,15 +78,19 @@
                         font-family: $AvenitLT;
                         font-weight: 400;
                         margin-bottom: 1.8rem;
+
+                        @media (max-width: 700px) {
+                            margin-bottom: $base;
+                        }
                     }
 
                     >div {
                         display: flex;
                         flex-wrap: wrap;
-                        gap: $lg;
+                        column-gap: $lg;
 
                         figure {
-                            flex-basis: 150px;
+                            flex-basis: 250px;
                             flex-grow: 1;
 
                             @media (max-width: 720px) {
@@ -99,7 +102,7 @@
 
                         address {
                             flex-grow: 1;
-                            flex-basis: 250px;
+                            flex-basis: 350px;
                             font-size: $base;
                             font-style: normal;
                             font-family: $AvenitLT;
@@ -117,6 +120,10 @@
             flex-direction: column;
             justify-content: space-between;
             gap: $xx;
+
+            @media (max-width: 1000px) {
+                justify-content: flex-start;
+            }
 
             * {
                 font-family: $AvenitLT;
@@ -160,6 +167,10 @@
                 padding: 12px 20px;
                 margin-top: $base;
                 width: fit-content;
+
+                @media (max-width: 1000px) {
+                    margin: $base auto 0 auto;
+                }
             }
         }
     }

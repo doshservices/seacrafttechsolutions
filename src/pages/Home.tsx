@@ -53,7 +53,7 @@ const Home: FC = () => {
                         </div>
                     )}
                 </div>
-                <a className="see-more" href="http://" target="_blank" rel="noopener noreferrer">View All</a>
+                <Link to="/services" className="see-more">View All</Link>
             </section>
             <section className="patners">
                 <h2>OUR PATNERS</h2>

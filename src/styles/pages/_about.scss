@@ -151,11 +151,8 @@
         grid-template-columns: 1fr 1fr;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 700px) {
         grid-template-columns: 1fr;
-    }
-
-    @media (max-width: 480px) {
         margin: 0;
         padding: $base;
     }
@@ -182,7 +179,7 @@
         color: $light100;
         transition: all .3s ease;
 
-        @media (max-width: 480px) {
+        @media (max-width: 700px) {
             font-size: calc($lg + 2px);
         }
     }
@@ -199,15 +196,17 @@
         padding: $lg;
 
         &:hover {
+            @media (min-width: 700px) {
 
-            h4,
-            p {
-                color: $primary100;
+                h4,
+                p {
+                    color: $primary100;
+                }
             }
         }
 
         &:nth-child(1) {
-            @media (max-width: 480px) {
+            @media (max-width: 700px) {
                 padding: $lg 0;
             }
         }
@@ -218,7 +217,9 @@
         border-top: 1px solid $secondary100;
 
         &:hover {
-            background: $light100;
+            @media (min-width: 700px) {
+                background: $light100;
+            }
         }
 
         &:nth-child(n + 5) {
@@ -268,23 +269,23 @@
             }
         }
 
-
         &:nth-child(6) {
             border-left: 1px solid $secondary100;
 
             @media (max-width: 1000px) {
                 border-right: 1px solid $secondary100;
                 border-bottom: 1px solid $secondary100;
-                border-left: 1px solid $secondary100;
+                border-left: 0;
             }
 
             @media (max-width: 800px) {
                 border-bottom: 0;
+                border-left: 1px solid $secondary100;
             }
         }
 
         &:nth-child(7) {
-            @media (max-width: 600px) {
+            @media (max-width: 700px) {
                 border-bottom: 0;
             }
         }
@@ -293,7 +294,7 @@
             border-right: 1px solid $secondary100;
         }
 
-        @media (max-width: 600px) {
+        @media (max-width: 700px) {
             &:nth-child(odd) {
                 border-right: 1px solid $secondary100;
             }
@@ -307,7 +308,7 @@
     border-left: 1px solid $secondary100;
     border-right: 1px solid $secondary100;
 
-    @media (max-width: 480px) {
+    @media (max-width: 700px) {
         margin: 0;
         border-left: 0;
         border-right: 0;
@@ -326,7 +327,7 @@
         font-weight: 400;
         font-family: $Recoleta;
 
-        @media (max-width: 480px) {
+        @media (max-width: 700px) {
             font-size: calc($lg + 2px);
         }
     }
@@ -349,7 +350,7 @@
     margin-bottom: 3rem;
     padding: $xx;
 
-    @media (max-width: 480px) {
+    @media (max-width: 700px) {
         margin: 0;
         padding: $xx $base;
         margin-bottom: $xl;
@@ -363,7 +364,7 @@
         font-family: $Recoleta;
         font-weight: 400;
 
-        @media (max-width: 480px) {
+        @media (max-width: 700px) {
             font-size: calc($lg + 4px);
         }
     }
@@ -390,7 +391,7 @@
         border: 1px solid $secondary100;
         padding: $lg;
 
-        @media (max-width: 480px) {
+        @media (max-width: 700px) {
             padding: $base;
         }
 

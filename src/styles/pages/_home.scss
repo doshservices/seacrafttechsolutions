@@ -5,7 +5,7 @@
         border-right: 1px solid $secondary100;
         border-left: 1px solid $secondary100;
 
-        @media (max-width: 480px) {
+        @media (max-width: 700px) {
             margin: 0;
             border: none;
             padding: 1.8rem $base;
@@ -25,7 +25,7 @@
             font-family: $Recoleta;
             line-height: 1.2;
 
-            @media (max-width: 480px) {
+            @media (max-width: 700px) {
                 font-size: calc($lg + 2px);
             }
         }
@@ -59,7 +59,7 @@
             font-family: $Ubuntu;
         }
 
-        @media (max-width: 480px) {
+        @media (max-width: 700px) {
             margin: 0;
             border: none;
             padding: 1.8rem $base;
@@ -78,7 +78,7 @@
             font-family: $Recoleta;
             line-height: 1.2;
 
-            @media (max-width: 480px) {
+            @media (max-width: 700px) {
                 font-size: calc($lg + 2px);
             }
         }
@@ -106,7 +106,7 @@
                 grid-template-columns: 1fr 1fr;
             }
 
-            @media (max-width: 550px) {
+            @media (max-width: 700px) {
                 border-left: 1px solid $secondary100;
                 grid-template-columns: 1fr;
             }
@@ -173,7 +173,7 @@
 
                 &:hover {
                     .link {
-                        @media (min-width: 780px) {
+                        @media (min-width: 700px) {
                             width: 100%;
                             max-width: 100%;
                             overflow: unset;
@@ -195,7 +195,7 @@
         border: 1px solid $secondary100;
         border-top: 0;
 
-        @media (max-width: 480px) {
+        @media (max-width: 700px) {
             margin: 0;
             border: none;
             padding: 1.8rem $base;
@@ -215,7 +215,7 @@
             font-family: $Recoleta;
             line-height: 1.2;
 
-            @media (max-width: 480px) {
+            @media (max-width: 700px) {
                 font-size: calc($lg + 2px);
             }
         }
@@ -258,12 +258,11 @@
         padding: 0 1.8rem;
         gap: $xl;
         color: $light100;
-        // border: 2px solid hsla(199, 100%, 23%, 1);
         position: relative;
         isolation: isolate;
         overflow: hidden;
 
-        @media (max-width: 480px) {
+        @media (max-width: 700px) {
             margin: 0;
             padding: 0 $base;
         }
@@ -278,7 +277,7 @@
             left: 50%;
             transform: translate(-50%, -50%);
 
-            @media (max-width: 500px) {
+            @media (max-width: 700px) {
                 transform: translate(-50%, -70%);
             }
         }
@@ -296,7 +295,7 @@
             font-family: $Recoleta;
             line-height: 1.2;
 
-            @media (max-width: 480px) {
+            @media (max-width: 700px) {
                 font-size: calc($lg + 2px);
             }
         }
@@ -320,7 +319,7 @@
 
         figure {
             flex-grow: 1;
-            flex-basis: 100px;
+            flex-basis: 200px;
 
             img {
                 width: 100%;
@@ -330,10 +329,10 @@
 
         div {
             flex-grow: 1;
-            flex-basis: 350px;
+            flex-basis: 450px;
             padding: $xl 0;
 
-            @media (max-width: 480px) {
+            @media (max-width: 700px) {
                 padding-top: 0;
             }
         }
@@ -343,7 +342,7 @@
         margin: 0 $px-fluid;
         padding: 1.8rem;
 
-        @media (max-width: 480px) {
+        @media (max-width: 700px) {
             margin: 0;
             padding: 1.8rem $base;
         }
@@ -361,24 +360,19 @@
             font-family: $Recoleta;
             line-height: 1.2;
 
-            @media (max-width: 480px) {
+            @media (max-width: 700px) {
                 font-size: calc($lg + 2px);
             }
         }
 
         .news-container {
-            display: flex;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
             border: 1px solid $secondary100;
 
             @media (max-width: 700px) {
-                flex-wrap: wrap;
-            }
-
-            @media (max-width: 530px) {
+                grid-template-columns: 1fr;
                 border: 0;
-            }
-
-            @media (max-width: 480px) {
                 gap: $lg;
             }
 
@@ -405,11 +399,11 @@
                     }
                 }
 
-                @media (max-width: 530px) {
+                @media (max-width: 700px) {
                     border: 1px solid $secondary100 !important;
                 }
 
-                @media (max-width: 480px) {
+                @media (max-width: 700px) {
                     padding: $tiny;
                 }
 
@@ -421,8 +415,10 @@
                     }
 
                     &:hover {
-                        img {
-                            transform: scale(1.15);
+                        @media (min-width: 850px) {
+                            img {
+                                transform: scale(1.15);
+                            }
                         }
                     }
                 }

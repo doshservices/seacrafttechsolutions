@@ -2,7 +2,8 @@ import {
     AppLogo,
     DropDownWhite,
     MenuBar,
-    FooterLogo
+    FooterLogo,
+    FooterMobileLogo
 } from "./logo";
 
-export { AppLogo, DropDownWhite, MenuBar, FooterLogo }
+export { AppLogo, DropDownWhite, MenuBar, FooterLogo, FooterMobileLogo }

@@ -14,7 +14,7 @@
             font-family: $AvenitLT;
             font-weight: 400;
 
-            @media (max-width: 480px) {
+            @media (max-width: 700px) {
                 text-align: center;
             }
         }
@@ -32,7 +32,7 @@
                 margin-bottom: $xx;
             }
 
-            @media (max-width: 480px) {
+            @media (max-width: 700px) {
                 font-size: calc($lg + 2px);
                 text-align: center;
             }
@@ -45,7 +45,7 @@
             line-height: 1.7;
             font-family: $AvenitLT;
 
-            @media (max-width: 480px) {
+            @media (max-width: 700px) {
                 text-align: center;
             }
         }
@@ -54,7 +54,7 @@
     &__open__positions {
         padding: $lg $px-fluid;
 
-        @media (max-width: 480px) {
+        @media (max-width: 700px) {
             padding: $lg 0;
         }
 
@@ -83,6 +83,10 @@
                     padding: $lg;
                 }
 
+                @media (max-width: 700px) {
+                    border-right: 0;
+                    border-left: 0;
+                }
             }
         }
 
@@ -93,10 +97,11 @@
             max-width: 344px;
             font-family: $Recoleta;
 
-            @media (max-width: 480px) {
+            @media (max-width: 700px) {
                 font-size: calc($lg + 2px);
                 text-align: center;
                 padding: 0 $base;
+                margin: $sm auto;
             }
         }
 

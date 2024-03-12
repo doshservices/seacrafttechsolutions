@@ -1,5 +1,6 @@
 import { FC, useState, useRef, useEffect } from "react";
 import { services } from "../data/services";
+import { Link } from "react-router-dom";
 
 const Services: FC = () => {
     const elementRef = useRef<any>(null);
@@ -36,16 +37,20 @@ const Services: FC = () => {
                 <div className="services__type">
                     {services.slice(0, 12).map((service: any, index: number) =>
                         <figure ref={elementRef} className="first" key={index}>
-                            <img src={service.logo} alt={service.name} loading="lazy" />
-                            <figcaption>{service.name}</figcaption>
+                            <Link to={`${service.url}`}>
+                                <img src={service.logo} alt={service.name} loading="lazy" />
+                                <figcaption>{service.name}</figcaption>
+                            </Link>
                         </figure>
                     )}
                 </div>
                 <div className="last">
                     {services.slice(12).map((service: any, index: number) =>
                         <figure style={{ maxWidth: width }} key={index}>
-                            <img src={service.logo} alt="" loading="lazy" />
-                            <figcaption>{service.name}</figcaption>
+                            <Link to={`${service.url}`}>
+                                <img src={service.logo} alt={service.name} loading="lazy" />
+                                <figcaption>{service.name}</figcaption>
+                            </Link>
                         </figure>
                     )}
                 </div>
