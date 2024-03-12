@@ -33,7 +33,6 @@
             border-left: 0;
         }
 
-
         section,
         form {
             flex-grow: 1;
@@ -85,18 +84,26 @@
                     }
 
                     >div {
-                        display: flex;
-                        flex-wrap: wrap;
+                        display: grid;
+                        grid-template-columns: .7fr 1fr;
                         column-gap: $lg;
+                        row-gap: 8px;
 
-                        figure {
+                        @media (max-width: 850px) {
+                            grid-template-columns: 1fr;
+                        }
+
+                        .map {
+                            border: 1px solid $secondary100;
+                            border-radius: 6px;
+                            overflow: hidden;
                             flex-basis: 250px;
                             flex-grow: 1;
 
-                            @media (max-width: 720px) {
-                                img {
-                                    width: 100%;
-                                }
+                            iframe {
+                                height: 100%;
+                                width: 100%;
+                                max-width: 100%;
                             }
                         }
 
