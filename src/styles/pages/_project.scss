@@ -81,10 +81,32 @@
         article {
             border: 1px solid $secondary100;
             padding: $md;
+            overflow: hidden;
 
             @media (max-width: 700px) {
                 padding: $sm;
             }
+
+            figure {
+
+                @media (min-width: 700px) {
+                    img {
+                        transition: all .3s ease;
+
+                        &:hover {
+                            transform: scale(1.2) translateY(-20px);
+                        }
+                    }
+                }
+
+                @media (max-width: 700px) {
+                    img {
+                        min-height: 224px;
+                        object-fit: cover;
+                    }
+                }
+            }
+
 
             h4 {
                 font-family: $Recoleta;
