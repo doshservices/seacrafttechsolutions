@@ -38,9 +38,13 @@ const Service: FC = () => {
                 <span>Back to List of Services</span>
             </Link>
             <figure>
-                <img src={service?.hero} alt={`${service?.name} Service Logo`} />
+                {windowWidth >= 700 ?
+                    <img src={service?.hero} alt={`${service?.name} Service Logo`} />
+                    :
+                    <img src={service?.logo} alt={`${service?.name} Service Logo`} />
+                }
             </figure>
-            {windowWidth > 480 ?
+            {windowWidth > 700 ?
                 <svg className="navigate" width="245" height="41" viewBox="0 0 245 41" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="150" cy="21.0001" r="2.28571" transform="rotate(-90 150 21.0001)" fill="black" />
                     <circle cx="150" cy="21" r="7.71429" transform="rotate(-90 150 21)" stroke="black" strokeWidth="0.571429" />

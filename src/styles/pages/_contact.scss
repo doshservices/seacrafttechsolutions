@@ -5,6 +5,18 @@
         padding: 60px 0 $xx 0;
     }
 
+    &__hero {
+        @media (max-width: 720px) {
+            height: 330px;
+        }
+
+        img {
+            min-height: 100%;
+            object-fit: cover;
+            width: 100%;
+        }
+    }
+
     .email-address {
         font-size: calc($base + 10px);
         font-family: $AvenitLT;
@@ -26,6 +38,7 @@
         border: 1px solid $secondary100;
         display: flex;
         justify-content: space-between;
+        row-gap: $lg;
 
         @media (max-width: 720px) {
             flex-wrap: wrap;
@@ -60,6 +73,7 @@
 
             @media (max-width: 720px) {
                 border-right: 0;
+                border-bottom: 1px solid $secondary100;
             }
 
             .wrapper {
