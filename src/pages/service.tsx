@@ -10,6 +10,7 @@ import { useWindowWidth } from "../utils/useWindowWidth";
 const Service: FC = () => {
     const location = useLocation();
     const [service, setService] = useState<any>(null);
+    const subseaPath = "/services/customized-subsea-tooling"
 
     const handleLocationChange = () => {
         const id = window.location.pathname.slice(10);
@@ -78,6 +79,10 @@ const Service: FC = () => {
                     {service?.fullDescription?.map((description: string, index: number) =>
                         <p key={index}>{description}</p>
                     )}
+                    {location.pathname === subseaPath ?
+                        <></>
+                        : null
+                    }
                 </div>
             </div>
         </div>
