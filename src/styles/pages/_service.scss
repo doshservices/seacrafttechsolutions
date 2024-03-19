@@ -1,7 +1,7 @@
 #service {
     padding: 78px $px-fluid 3rem $px-fluid;
 
-    @media (max-width: 700px) {
+    @media (max-width: 750px) {
         padding: 75px 0 $xl 0;
     }
 
@@ -20,18 +20,14 @@
         border-bottom: 1px solid hsla(0, 0%, 18%, 0.1);
         font-family: $AvenitLT;
 
-        @media (max-width: 850px) {
-            margin-top: 0;
-        }
-
-        @media (max-width: 700px) {
-            padding: 5px $base;
+        @media (max-width: 750px) {
+            padding: 10px $px-fluid;
         }
     }
 
     figure {
-        @media (max-width: 700px) {
-            padding: 0 $base;
+        @media (max-width: 750px) {
+            padding: 0 $px-fluid;
 
             img {
                 min-height: 330px;
@@ -48,7 +44,7 @@
         margin: $base 0;
         display: block;
 
-        @media (max-width: 700px) {
+        @media (max-width: 750px) {
             margin: $base auto;
         }
     }
@@ -57,7 +53,7 @@
         display: grid;
         grid-template-columns: .5fr 1fr;
 
-        @media (max-width: 700px) {
+        @media (max-width: 750px) {
             grid-template-columns: 1fr;
         }
 
@@ -70,11 +66,7 @@
                 border-bottom: 1px solid $secondary100;
             }
 
-            @media (max-width: 700px) {
-                padding: $base $px-fluid !important;
-            }
-
-            @media (max-width: 700px) {
+            @media (max-width: 750px) {
                 padding: $base $px-fluid;
                 border: none;
                 border-bottom: 1px solid $secondary100;
@@ -89,12 +81,12 @@
                 line-height: 1.2;
                 font-family: $Recoleta;
 
-                @media (max-width: 700px) {
+                @media (max-width: 750px) {
                     max-width: 100%;
                     text-align: center;
                 }
 
-                @media (max-width: 700px) {
+                @media (max-width: 750px) {
                     font-size: calc($lg + 2px);
                 }
             }
@@ -103,30 +95,148 @@
                 display: block;
                 height: 71px;
 
-                @media (max-width: 700px) {
+                @media (max-width: 750px) {
                     margin: 0 auto;
                 }
-            }
-
-            p {
-                font-size: $base;
-                line-height: 1.8;
-                font-family: $AvenitLT;
-                text-align: justify;
             }
         }
 
         .description {
-            display: flex;
-            flex-direction: column;
-            gap: $lg;
-            justify-content: center;
             border-left: 0;
+            padding: 0;
 
-            @media (max-width: 700px) {
+            @media (max-width: 750px) {
                 border-top: 0;
                 border-left: 1px solid $secondary100;
                 border-left: 0;
+            }
+
+            .paragraph {
+                padding: 3.5rem $xx;
+                display: flex;
+                flex-direction: column;
+                gap: 1.6rem;
+
+                @media (max-width: 750px) {
+                    padding: $xx $px-fluid;
+                }
+
+                p {
+                    font-size: $base;
+                    line-height: 1.8;
+                    font-family: $AvenitLT;
+                    text-align: justify;
+                }
+            }
+
+            .pdfs {
+                padding: 3.5rem $xx;
+                border-top: 1px solid $secondary100;
+                border-bottom: 1px solid $secondary100;
+
+                @media (max-width: 750px) {
+                    padding: $xx $px-fluid;
+                }
+
+                h3 {
+                    font-family: $Recoleta;
+                    font-size: calc($xl - 2px);
+                    font-weight: 400;
+
+                    @media (max-width: 750px) {
+                        font-size: $lg;
+                    }
+                }
+
+                .pdf {
+                    display: flex;
+                    align-items: center;
+                    border: none;
+                    background: transparent;
+                    color: $secondary100;
+                    font-size: $base;
+                    font-weight: 600;
+                    font-family: $AvenitLT;
+                    gap: 10px;
+                    margin: $base 0;
+                    text-align: justify;
+
+                    &:focus-visible {
+                        outline: 1px solid $secondary100;
+                    }
+
+                }
+
+                .document {
+                    position: fixed;
+                    height: 100vh;
+                    overflow-y: scroll;
+                    inset: 0;
+                    z-index: 1000;
+                    background-color: hsl(0, 0%, 0%, .7);
+                    padding: $base 0;
+
+                    .close {
+                        font-size: $base;
+                        margin: 0 0 $base 20%;
+                        background: transparent;
+                        border: none;
+
+                        @media (max-width: 1000px) {
+                            margin: 0 0 $base 10%;
+                        }
+
+                        @media (max-width: 750px) {
+                            margin: 0 0 $base $base;
+                        }
+                    }
+
+                    .react-pdf__Page {
+                        background: transparent !important;
+
+                        >* {
+                            width: 100%;
+                            max-width: 100%;
+                            display: block;
+                            margin: 0 auto;
+                        }
+                    }
+                }
+            }
+
+            .mail {
+                padding: 3.5rem $xx 3.5rem $xx;
+
+                @media (max-width: 750px) {
+                    padding: $xx $px-fluid;
+                }
+
+                h3 {
+                    font-family: $Recoleta;
+                    font-size: calc($xl - 2px);
+                    font-weight: 400;
+
+                    @media (max-width: 750px) {
+                        font-size: $lg;
+                    }
+                }
+
+                a {
+                    color: #000;
+                    font-family: $AvenitLT;
+                    font-size: $base;
+                    font-weight: 600;
+                    display: block;
+                    text-align: justify;
+
+                    &:visited {
+                        color: #000;
+                    }
+
+                    span {
+                        color: $secondary100;
+                    }
+                }
             }
         }
     }

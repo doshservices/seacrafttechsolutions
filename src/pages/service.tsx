@@ -2,15 +2,52 @@ import { FC, useEffect, useState } from "react";
 import { services } from "../data/services";
 import { Link, useLocation } from "react-router-dom";
 import { useWindowWidth } from "../utils/useWindowWidth";
+import { Document, Page, pdfjs } from 'react-pdf';
+import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
+import 'react-pdf/dist/esm/Page/TextLayer.css';
+import NSSBreaker from "../../public/TMT-NSS-004-Breaker_110901.pdf"
+import NSSIntensifier from "../../public/TMT-NSS-005-10K Intensifier_110852.pdf"
+import NSSMultipurposeRotaryTool from "../../public/TMT-NSS-001-Multipurpose Rotary Tool_034530.pdf"
+import NSSMainElectronicsEnclosure from "../../public/TMT-NSS-002-Main Electronics Enclosure_110911.pdf"
+import NSSHydraulicActuatorOverrideHot from "../../public/TMT-NSS-003-Hydraulic Actuator Override Hot Stab Two Port_034536.pdf"
 
-// interface Experience {
-//     id: string;
-// }
+pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
 const Service: FC = () => {
     const location = useLocation();
     const [service, setService] = useState<any>(null);
     const subseaPath = "/services/customized-subsea-tooling"
+    const [numPages, setNumPages] = useState<number | null>(null);
+    const [showPdf, setShowPdf] = useState(false)
+    const [file, setFile] = useState(NSSBreaker)
+
+    function onDocumentLoadSuccess({ numPages }: { numPages: number }) {
+        setNumPages(numPages);
+    }
+
+    const openPdf = (fileType: any) => {
+        setShowPdf(!showPdf)
+        setFile(fileType)
+    }
+
+    useEffect(() => {
+        const handleBodyOverflow = () => {
+            document.body.style.overflow = showPdf ? 'hidden' : 'unset';
+        };
+
+        handleBodyOverflow();
+
+        return () => {
+            handleBodyOverflow();
+        };
+    }, [showPdf]);
+
+    const pages: JSX.Element[] = [];
+    if (numPages) {
+        for (let i = 1; i <= numPages; i++) {
+            pages.push(<Page key={`page_${i}`} pageNumber={i} />);
+        }
+    }
 
     const handleLocationChange = () => {
         const id = window.location.pathname.slice(10);
@@ -45,7 +82,7 @@ const Service: FC = () => {
                     <img src={service?.logo} alt={`${service?.name} Service Logo`} />
                 }
             </figure>
-            {windowWidth > 700 ?
+            {windowWidth > 750 ?
                 <svg className="navigate" width="245" height="41" viewBox="0 0 245 41" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="150" cy="21.0001" r="2.28571" transform="rotate(-90 150 21.0001)" fill="black" />
                     <circle cx="150" cy="21" r="7.71429" transform="rotate(-90 150 21)" stroke="black" strokeWidth="0.571429" />
@@ -76,11 +113,69 @@ const Service: FC = () => {
                     <h2>{service?.name}</h2>
                 </div>
                 <div className="description">
-                    {service?.fullDescription?.map((description: string, index: number) =>
-                        <p key={index}>{description}</p>
-                    )}
+                    <div className="paragraph">
+                        {service?.fullDescription?.map((description: string, index: number) =>
+                            <p key={index}>{description}</p>
+                        )}
+                    </div>
                     {location.pathname === subseaPath ?
-                        <></>
+                        <>
+                            <section className="pdfs">
+                                <h3>Customised Tooling solutions</h3>
+                                <button onClick={() => openPdf(NSSBreaker)} className="pdf">
+                                    <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M16.175 13.5L10.575 19.1L12 20.5L20 12.5L12 4.5L10.575 5.9L16.175 11.5H4V13.5H16.175Z" fill="black" />
+                                    </svg>
+                                    <span>NSS-001-Breaker</span>
+                                </button>
+                                <button onClick={() => openPdf(NSSIntensifier)} className="pdf">
+                                    <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M16.175 13.5L10.575 19.1L12 20.5L20 12.5L12 4.5L10.575 5.9L16.175 11.5H4V13.5H16.175Z" fill="black" />
+                                    </svg>
+                                    <span>NSS-002-10K Intensifier</span>
+                                </button>
+                                <button onClick={() => openPdf(NSSMultipurposeRotaryTool)} className="pdf">
+                                    <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M16.175 13.5L10.575 19.1L12 20.5L20 12.5L12 4.5L10.575 5.9L16.175 11.5H4V13.5H16.175Z" fill="black" />
+                                    </svg>
+                                    <span>NSS-003-Multipurpose Rotary Tool</span>
+                                </button>
+                                <button onClick={() => openPdf(NSSMainElectronicsEnclosure)} className="pdf">
+                                    <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M16.175 13.5L10.575 19.1L12 20.5L20 12.5L12 4.5L10.575 5.9L16.175 11.5H4V13.5H16.175Z" fill="black" />
+                                    </svg>
+                                    <span>NSS-004-Main Electronics Enclosure</span>
+                                </button>
+                                <button onClick={() => openPdf(NSSHydraulicActuatorOverrideHot)} className="pdf">
+                                    <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M16.175 13.5L10.575 19.1L12 20.5L20 12.5L12 4.5L10.575 5.9L16.175 11.5H4V13.5H16.175Z" fill="black" />
+                                    </svg>
+                                    <span>NSS-005-Hydraulic Actuator Override Hot Stab Two Port</span>
+                                </button>
+                                {showPdf ?
+                                    <div className="document">
+                                        <button className="close" onClick={() => openPdf(NSSHydraulicActuatorOverrideHot)}>
+                                            <svg width="30" height="30" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M5.33268 15.8333L4.16602 14.6666L8.83268 9.99996L4.16602 5.33329L5.33268 4.16663L9.99935 8.83329L14.666 4.16663L15.8327 5.33329L11.166 9.99996L15.8327 14.6666L14.666 15.8333L9.99935 11.1666L5.33268 15.8333Z" fill="#fff" />
+                                            </svg>
+                                        </button>
+                                        <Document file={file} onLoadSuccess={onDocumentLoadSuccess}>
+                                            {pages}
+                                        </Document>
+                                    </div>
+                                    : null
+                                }
+                            </section>
+                            <section className="mail">
+                                <h3>For More Enquires, Sales or Rentals of Tools:</h3>
+                                <div style={{ display: "flex", alignItems: "center", marginTop: "1rem", gap: "10px" }}>
+                                    <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M16.175 13.5L10.575 19.1L12 20.5L20 12.5L12 4.5L10.575 5.9L16.175 11.5H4V13.5H16.175Z" fill="black" />
+                                    </svg>
+                                    <a href="mailto:sales@seacrafttechsolutions.com" target="_blank">Contact: <span>sales@seacrafttechsolutions.com</span></a>
+                                </div>
+                            </section>
+                        </>
                         : null
                     }
                 </div>
