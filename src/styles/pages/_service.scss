@@ -19,6 +19,7 @@
         border-top: 1px solid hsla(0, 0%, 18%, 0.1);
         border-bottom: 1px solid hsla(0, 0%, 18%, 0.1);
         font-family: $AvenitLT;
+        width: fit-content;
 
         @media (max-width: 750px) {
             padding: 10px $px-fluid;
@@ -26,6 +27,8 @@
     }
 
     figure {
+        margin-bottom: $xl;
+
         @media (max-width: 750px) {
             padding: 0 $px-fluid;
 
@@ -40,12 +43,77 @@
         }
     }
 
-    .navigate {
-        margin: $base 0;
-        display: block;
+    .wrapper {
+        position: relative;
 
-        @media (max-width: 750px) {
-            margin: $base auto;
+        .service__slider {
+            padding-bottom: 3.5rem;
+
+            @media (max-width: 750px) {
+                padding-bottom: 8rem;
+
+                img {
+                    min-height: 330px;
+                    object-fit: cover;
+                    min-height: 330px;
+                }
+            }
+
+            .swiper-pagination {
+                bottom: 1.05rem;
+                width: fit-content;
+                left: 140px;
+                gap: 4px;
+                display: flex;
+                z-index: 10;
+
+                @media (max-width: 750px) {
+                    left: 50%;
+                    transform: translateX(-50%);
+                    bottom: $xl;
+                }
+
+                .swiper-pagination-bullet {
+                    background: #000;
+                    width: 3.6px;
+                    height: 3.6px;
+                    border-radius: 10px;
+                    opacity: 1;
+                    transition: all .3s ease-in-out;
+                    outline: 1px solid transparent;
+                    outline-offset: 4px;
+                }
+
+                .swiper-pagination-bullet-active {
+                    outline: 1px solid #000;
+                    height: 4.5px;
+                    width: 4.5px;
+                }
+            }
+        }
+
+        .navigate {
+            margin: -2.5rem 0 $base 0;
+            display: flex;
+            gap: $md;
+            max-width: fit-content;
+
+            button {
+                border: none;
+                background-color: transparent;
+
+                &:focus-visible {
+                    outline: 1px solid $secondary100;
+                }
+            }
+
+            @media (max-width: 750px) {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: $xx;
+                z-index: 10;
+            }
         }
     }
 

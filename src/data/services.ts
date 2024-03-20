@@ -10,7 +10,10 @@ import remoteVehiclePageIcon from "../assets/Icons/remotepage-icon.svg"
 
 import subseaTool from "../assets/Icons/subsea-tooling.svg"
 import subseaLogo from "../assets/Seacraft Asset/Images/tooling.png"
-import subseaHero from "../assets/Seacraft Asset/Images/sebseaHero.png"
+import subseaHero1 from "../assets/Seacraft Asset/Images/Hero Section-3.png"
+import subseaHero2 from "../assets/Seacraft Asset/Images/Hero Section-1.png"
+import subseaHero3 from "../assets/Seacraft Asset/Images/Hero Section.png"
+import subseaHero4 from "../assets/Seacraft Asset/Images/Hero Section-2.png"
 import subseaPageIcon from "../assets/Icons/sebseaPageIcon.svg"
 
 import autoHero from "../assets/Seacraft Asset/Images/autoHero.png"
@@ -70,7 +73,7 @@ export const services = [
         url: "/services/marine-operations",
         id: "marine-operations",
         logo: marineLogo,
-        hero: marineHero,
+        hero: [marineHero],
         pageIcon: marinePageIcon,
         fullDescription: [
             "Seacraft Technology Solutions Limited stands as a premier provider of Marine Operations services tailored to meet the diverse needs of the offshore industry. With a steadfast commitment to efficiency, safety, and reliability, we orchestrate seamless logistical support and vessel management to facilitate critical operations in the challenging marine environment. Our experienced team, equipped with cutting-edge technology and best practices, ensures the smooth transportation of personnel, equipment, and supplies to offshore installations, supporting vital exploration, production, and maintenance activities.",
@@ -85,7 +88,7 @@ export const services = [
         url: "/services/remotely-operated-vehicle",
         id: "remotely-operated-vehicle",
         logo: remoteVehicleLogo,
-        hero: remoteHero,
+        hero: [remoteHero],
         pageIcon: remoteVehiclePageIcon,
         fullDescription: [
             "At Seacraft, we are at the forefront of Remotely Operated Vehicle (ROV) solutions, pioneering cutting-edge technology to navigate the depths of the ocean with precision and expertise. Our fleet of ROVs, equipped with state-of-the-art sensors, cameras, and manipulators, enables us to conduct a wide range of subsea tasks with unparalleled accuracy and efficiency. From intricate inspections of underwater structures to complex interventions and repairs, our ROVs are equipped to handle the most challenging subsea environments.",
@@ -100,7 +103,7 @@ export const services = [
         url: "/services/customized-subsea-tooling",
         id: "customized-subsea-tooling",
         logo: subseaLogo,
-        hero: subseaHero,
+        hero: [subseaHero1, subseaHero2, subseaHero3, subseaHero4],
         pageIcon: subseaPageIcon,
         fullDescription: [
 
@@ -116,7 +119,7 @@ export const services = [
         url: "/services/autonomous-unmanned-vehicle",
         id: "autonomous-unmanned-vehicle",
         logo: unmannedLogo,
-        hero: autoHero,
+        hero: [autoHero],
         pageIcon: unmannedPageIcon,
         fullDescription: [
             "At Seacraft, we are at the forefront of Autonomous Unmanned Vehicle(AUV) solutions, pioneering groundbreaking technology to explore the depths of the ocean with unparalleled precision and efficiency.Our fleet of AUVs, equipped with state - of - the - art sensors, navigational systems, and data collection capabilities, empowers us to conduct comprehensive subsea missions with exceptional accuracy and reliability.",
@@ -130,7 +133,7 @@ export const services = [
         briefDescription: "Our dedicated team ensures the smooth operation and upkeep of offshore facilities through proactive maintenance strategies and support services.",
         url: "/services/facility-maintenance",
         id: "facility-maintenance",
-        hero: facilityHero,
+        hero: [facilityHero],
         pageIcon: facilityMaintenancePageIcon,
         logo: facilityLogo,
         fullDescription: [
@@ -145,7 +148,7 @@ export const services = [
         briefDescription: "Utilizing advanced pigging technology and state-of-the-art inspection methods, our expert team conducts thorough assessments to detect potential issues.",
         url: "/services/pipeline-pigging-inspection",
         id: "pipeline-pigging-inspection",
-        hero: piggingHero,
+        hero: [piggingHero],
         pageIcon: piggingPageIcon,
         logo: pipeLineLogo,
         fullDescription: [
@@ -161,7 +164,7 @@ export const services = [
         briefDescription: "Corrosion Prevention & Control Services are paramount at Seacraft, where we employ cutting-edge techniques to safeguard offshore assets.",
         url: "/services/corrosion-prevention-control-services",
         id: "corrosion-prevention-control-services",
-        hero: corossionHero,
+        hero: [corossionHero],
         pageIcon: corrosionPageIcon,
         logo: corossionLogo,
         fullDescription: [
@@ -176,7 +179,7 @@ export const services = [
         briefDescription: "Through proactive maintenance, we uphold waterway efficiency and safety, supporting sustainable marine operations and environmental preservation.",
         url: "/services/dredging-hydraulic-water-channel-maintenance",
         id: "dredging-hydraulic-water-channel-maintenance",
-        hero: dredgingHero,
+        hero: [dredgingHero],
         pageIcon: dredgingPageIcon,
         logo: dredging,
         fullDescription: [
@@ -191,7 +194,7 @@ export const services = [
         briefDescription: "Through proactive maintenance, we uphold waterway efficiency and safety, supporting sustainable marine operations and environmental preservation.",
         url: "/services/chemicals-water-supply",
         id: "chemicals-water-supply",
-        hero: chemicalsHero,
+        hero: [chemicalsHero],
         pageIcon: chemicalsPageIcon,
         logo: chemicals,
         fullDescription: [
@@ -206,7 +209,7 @@ export const services = [
         briefDescription: "Through proactive maintenance, we uphold waterway efficiency and safety, supporting sustainable marine operations and environmental preservation.",
         url: "/services/wellbore-cleanout-services",
         id: "wellbore-cleanout-services",
-        hero: wellboreHero,
+        hero: [wellboreHero],
         pageIcon: wellborePageIcon,
         logo: wellbore,
         fullDescription: [
@@ -221,7 +224,7 @@ export const services = [
         briefDescription: "Through proactive maintenance, we uphold waterway efficiency and safety, supporting sustainable marine operations and environmental preservation.",
         url: "/services/well-testing-services",
         id: "well-testing-services",
-        hero: welltestingHero,
+        hero: [welltestingHero],
         pageIcon: welltestingPageIcon,
         logo: welltesting,
         fullDescription: [
@@ -237,7 +240,7 @@ export const services = [
         briefDescription: "Through proactive maintenance, we uphold waterway efficiency and safety, supporting sustainable marine operations and environmental preservation.",
         url: "/services/supply-chain-testing",
         id: "supply-chain-testing",
-        hero: supplychainHero,
+        hero: [supplychainHero],
         pageIcon: supplychainPageIcon,
         logo: supply,
         fullDescription: [
@@ -252,7 +255,7 @@ export const services = [
         briefDescription: "Through proactive maintenance, we uphold waterway efficiency and safety, supporting sustainable marine operations and environmental preservation.",
         url: "/services/warehouse-and-storage",
         id: "warehouse-and-storage",
-        hero: warehouseHero,
+        hero: [warehouseHero],
         pageIcon: warehousePageIcon,
         logo: warehouse,
         fullDescription: [
@@ -267,7 +270,7 @@ export const services = [
         briefDescription: "Through proactive maintenance, we uphold waterway efficiency and safety, supporting sustainable marine operations and environmental preservation.",
         url: "/services/manning",
         id: "manning",
-        hero: manningHero,
+        hero: [manningHero],
         pageIcon: manningPageIcon,
         logo: manning,
         fullDescription: [
