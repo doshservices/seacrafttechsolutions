@@ -49,6 +49,10 @@
         .service__slider {
             padding-bottom: 3.5rem;
 
+            .slides {
+                background: #fff;
+            }
+
             @media (max-width: 750px) {
                 padding-bottom: 8rem;
 

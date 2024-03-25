@@ -70,21 +70,27 @@
     }
 
     &s {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        // display: grid;
+        // grid-template-columns: 1fr 1fr;
 
-        @media (max-width: 700px) {
-            grid-template-columns: 1fr;
-            gap: $base;
-        }
+        // @media (max-width: 700px) {
+        //     grid-template-columns: 1fr;
+        //     gap: $base;
+        // }
 
         article {
             border: 1px solid $secondary100;
             padding: $md;
             overflow: hidden;
+            width: 50%;
+
+            @media (max-width: 1000px) {
+                width: 80%;
+            }
 
             @media (max-width: 700px) {
                 padding: $sm;
+                width: 100%;
             }
 
             figure {

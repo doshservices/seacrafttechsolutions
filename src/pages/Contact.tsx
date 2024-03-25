@@ -1,29 +1,63 @@
-import { FC, useRef } from "react";
 import heroImg from "../assets/Seacraft Asset/Images/contact-hero.png"
+import { FC, useState } from "react";
+import axios from "axios";
 
 const Contact: FC = () => {
 
-    const formRef = useRef<HTMLFormElement | any>(null)
+    type FormFields = {
+        text: string;
+        from: string;
+        to: string;
+        fromName: string;
+        toName: string;
+    };
 
-    const sendEmail = (e: any) => {
+    const defaultFormFields = {
+        text: "",
+        from: "",
+        to: "admin@seacrafttechsolutions.com",
+        fromName: "",
+        toName: "Seacraft Tech Solutions"
+    };
+
+    // const [showResponse, setSHowResponse] = useState<boolean>(false)
+    const [showError, setSHowError] = useState<boolean>(false)
+    const [showErrorMsg, setShowErrorMsg] = useState<string>("")
+    const [isSubmitting, setIsSubmitting] = useState<boolean>(false)
+    const [formFields, setFormFields] = useState<FormFields>(defaultFormFields);
+    // console.log(formFields);
+
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        const { name, value } = e.target;
+        setFormFields({ ...formFields, [name]: value });
+    };
+
+    const apiUrl: string = "https://seacraft-mailer-8zqrk.ondigitalocean.app/api/send-mail";
+
+    const sendEmail = async (e: any) => {
         e.preventDefault();
-        // emailjs
-        //     .sendForm('service_eldv9ba',
-        //         'template_k7jn95w',
-        //         form?.current,
-        //         'TpX0bu1PFasNTFjXI'
-        //     )
-        //     .then((result) => {
-        //         console.log(result.text);
-        //         setAlert(true)
-        //         setError(false)
-        //         setSubmitting(false)
-        //     }, (error) => {
-        //         console.log(error.text);
-        //         setError(true)
-        //         setAlert(false)
-        //         setSubmitting(false)
-        //     });
+        setIsSubmitting(true)
+        try {
+            const response = await axios.post(apiUrl, formFields, {
+                headers: {
+                    "Content-Type": "application/json"
+                },
+            })
+            console.log(response);
+            if (response?.status === 200 || 201) {
+                setSHowError(false)
+                // setSHowResponse(true)
+                setIsSubmitting(false)
+            }
+        } catch (error: any) {
+            setSHowError(true)
+            // setSHowResponse(false)
+            console.log(error);
+            setIsSubmitting(false)
+            if (error?.message === "Network Error") {
+                setShowErrorMsg("Network Error")
+            }
+        }
     }
 
     return (
@@ -58,20 +92,24 @@ const Contact: FC = () => {
                         </div>
                     </div>
                 </section>
-                <form ref={formRef} onSubmit={sendEmail}>
+                <form onSubmit={sendEmail}>
                     <fieldset>
                         <legend>Full Name</legend>
-                        <input type="text" name="name" id="name" placeholder="Enter your full name here" required />
+                        <input value={formFields.fromName} onChange={handleChange} type="text" name="fromName" id="fromName" placeholder="Enter your full name here" required />
                     </fieldset>
                     <fieldset>
                         <legend>Email Address</legend>
-                        <input type="email" name="email" id="email" placeholder="Enter your email address here" required />
+                        <input value={formFields.from} onChange={handleChange} type="email" name="from" id="from" placeholder="Enter your email address here" required />
                     </fieldset>
                     <fieldset>
                         <legend>Message</legend>
-                        <textarea name="message" id="message" placeholder="Type your message here" required></textarea>
+                        <textarea value={formFields.text} onChange={handleChange} name="text" id="text" placeholder="Type your message here" required></textarea>
                     </fieldset>
-                    <button type="submit">Send Message</button>
+                    {showError ?
+                        <p className="error">{showErrorMsg}</p>
+                        : null
+                    }
+                    <button disabled={isSubmitting} type="submit">{isSubmitting ? "Sending Message ..." : "Send Message"}</button>
                 </form>
             </div>
         </div>

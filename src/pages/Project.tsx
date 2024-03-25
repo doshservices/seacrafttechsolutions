@@ -10,7 +10,7 @@ const Project: FC = () => {
             <div className="projects">
                 <article title="Seacraft Technology Solutions Limited has proudly provided Remote Operated Vehicle (ROV) services for the prestigious SNEPCO-BRORON-TMT project.">
                     <figure>
-                        <img src={project} alt="Seacraft Technology Solutions Limited has proudly provided Remote Operated Vehicle (ROV) services for the prestigious SNEPCO-BRORON-TMT project." />
+                        <img src={project} alt="Seacraft Technology Solutions Limited has proudly provided Remote Operated Vehicle (ROV) services for the prestigious SNEPCO-BRORON-TMT project." loading="lazy" />
                     </figure>
                     <h4 className="title">SNEPCO-BRORON-TMT</h4>
                     <h5 className="subtitle">ROV Services from 2018 - 2024</h5>
@@ -29,7 +29,7 @@ const Project: FC = () => {
                         </svg>
                     </a>
                 </article>
-                <article title="Seacraft Technology Solutions Limited has proudly provided Remote Operated Vehicle (ROV) services for the prestigious SNEPCO-BRORON-TMT project.">
+                {/* <article title="Seacraft Technology Solutions Limited has proudly provided Remote Operated Vehicle (ROV) services for the prestigious SNEPCO-BRORON-TMT project.">
                     <figure>
                         <img src={project} alt="Seacraft Technology Solutions Limited has proudly provided Remote Operated Vehicle (ROV) services for the prestigious SNEPCO-BRORON-TMT project." />
                     </figure>
@@ -49,7 +49,7 @@ const Project: FC = () => {
                             </defs>
                         </svg>
                     </a>
-                </article>
+                </article> */}
             </div>
         </section>
     )

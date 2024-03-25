@@ -3,7 +3,10 @@ import marineHero from "../assets/Seacraft Asset/Images/marineHero.png"
 import marineLogo from "../assets/Seacraft Asset/Images/marineLogo.png"
 import marinePageIcon from "../assets/Icons/marine-pageIcon.svg"
 
-import remoteHero from "../assets/Seacraft Asset/Images/remoteHero.png"
+import remoteHero1 from "../assets/Seacraft Asset/Images/remoteHero1.jpg"
+import remoteHero2 from "../assets/Seacraft Asset/Images/remoteHero2.png"
+import remoteHero3 from "../assets/Seacraft Asset/Images/remoteHero3.png"
+import remoteHero4 from "../assets/Seacraft Asset/Images/remoteHero4.png"
 import remoteVehicleIcon from "../assets/Icons/remote-vehicle.svg"
 import remoteVehicleLogo from "../assets/Seacraft Asset/Images/remoteVehicle.png"
 import remoteVehiclePageIcon from "../assets/Icons/remotepage-icon.svg"
@@ -16,7 +19,10 @@ import subseaHero3 from "../assets/Seacraft Asset/Images/Hero Section.png"
 import subseaHero4 from "../assets/Seacraft Asset/Images/Hero Section-2.png"
 import subseaPageIcon from "../assets/Icons/sebseaPageIcon.svg"
 
-import autoHero from "../assets/Seacraft Asset/Images/autoHero.png"
+import autoHero1 from "../assets/Seacraft Asset/Images/autoHero.png"
+import autoHero2 from "../assets/Seacraft Asset/Images/autoHero2.png"
+import autoHero3 from "../assets/Seacraft Asset/Images/autoHero3.png"
+import autoHero4 from "../assets/Seacraft Asset/Images/autoHero4.png"
 import autoVehicle from "../assets/Icons/unmanned.svg"
 import unmannedLogo from "../assets/Seacraft Asset/Images/unmannedVehicle.png"
 import unmannedPageIcon from "../assets/Icons/unmannedPageIcon.svg"
@@ -26,7 +32,9 @@ import facilityHero from "../assets/Seacraft Asset/Images/maintainHero.png"
 import facilityMaintenanceIcon from "../assets/Icons/maintainance.svg"
 import facilityMaintenancePageIcon from "../assets/Icons/maintainancePageIcon.svg"
 
-import piggingHero from "../assets/Seacraft Asset/Images/piggingHero.png"
+import piggingHero1 from "../assets/Seacraft Asset/Images/piggingHero1.png"
+import piggingHero2 from "../assets/Seacraft Asset/Images/piggingHero2.png"
+import piggingHero3 from "../assets/Seacraft Asset/Images/piggingHero3.png"
 import pipeLineLogo from "../assets/Seacraft Asset/Images/pigging.png"
 import pipePiggingIcon from "../assets/Icons/inspection.svg"
 import piggingPageIcon from "../assets/Icons/piggingPageIcon.svg"
@@ -88,7 +96,7 @@ export const services = [
         url: "/services/remotely-operated-vehicle",
         id: "remotely-operated-vehicle",
         logo: remoteVehicleLogo,
-        hero: [remoteHero],
+        hero: [remoteHero1, remoteHero2, remoteHero3, remoteHero4],
         pageIcon: remoteVehiclePageIcon,
         fullDescription: [
             "At Seacraft, we are at the forefront of Remotely Operated Vehicle (ROV) solutions, pioneering cutting-edge technology to navigate the depths of the ocean with precision and expertise. Our fleet of ROVs, equipped with state-of-the-art sensors, cameras, and manipulators, enables us to conduct a wide range of subsea tasks with unparalleled accuracy and efficiency. From intricate inspections of underwater structures to complex interventions and repairs, our ROVs are equipped to handle the most challenging subsea environments.",
@@ -106,7 +114,6 @@ export const services = [
         hero: [subseaHero1, subseaHero2, subseaHero3, subseaHero4],
         pageIcon: subseaPageIcon,
         fullDescription: [
-
             " Seacraft Technology Solutions Limited stands at the forefront of the industry, conceptualizing and offering Customized Subsea Tooling solutions tailored to the unique demands of underwater operations.Through a combination of conceptualizing innovative design, precision engineering, and extensive industry expertise, we develop specialized tools optimized to deliver unparalleled efficiency and effectiveness in the challenging subsea environment.",
             "Our dedicated team works closely with clients to gain a deep understanding of their specific requirements and operational challenges.Utilizing advanced technologies and state- of - the - art manufacturing processes, we design and fabricate bespoke subsea tools that address these needs with precision and reliability.Whether it's complex intervention tasks, routine maintenance operations, or ambitious underwater construction projects, our Customized Subsea Tooling solutions empower clients to achieve their goals with confidence and precision.",
             "At Seacraft, we prioritize reliability, safety, and performance in every aspect of our work.Our commitment to quality ensures that our customized tools withstand the rigors of subsea operations, delivering consistent results even in the harshest conditions.By pushing the boundaries of what is possible in subsea technology, we drive innovation and efficiency in the offshore industry, helping our clients overcome challenges and achieve success in their endeavors."
@@ -119,7 +126,7 @@ export const services = [
         url: "/services/autonomous-unmanned-vehicle",
         id: "autonomous-unmanned-vehicle",
         logo: unmannedLogo,
-        hero: [autoHero],
+        hero: [autoHero1, autoHero2, autoHero3, autoHero4],
         pageIcon: unmannedPageIcon,
         fullDescription: [
             "At Seacraft, we are at the forefront of Autonomous Unmanned Vehicle(AUV) solutions, pioneering groundbreaking technology to explore the depths of the ocean with unparalleled precision and efficiency.Our fleet of AUVs, equipped with state - of - the - art sensors, navigational systems, and data collection capabilities, empowers us to conduct comprehensive subsea missions with exceptional accuracy and reliability.",
@@ -148,7 +155,7 @@ export const services = [
         briefDescription: "Utilizing advanced pigging technology and state-of-the-art inspection methods, our expert team conducts thorough assessments to detect potential issues.",
         url: "/services/pipeline-pigging-inspection",
         id: "pipeline-pigging-inspection",
-        hero: [piggingHero],
+        hero: [piggingHero1, piggingHero2, piggingHero3],
         pageIcon: piggingPageIcon,
         logo: pipeLineLogo,
         fullDescription: [
