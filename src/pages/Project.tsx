@@ -1,14 +1,18 @@
 import { FC } from "react";
 import project from "../assets/Seacraft Asset/Images/project.png"
+import { useNavigate } from "react-router-dom";
+export { project }
 
 const Project: FC = () => {
+    const navigate = useNavigate();
+
     return (
         <section className="project">
             <h2>PROJECTS</h2>
             <h3>Featured Projects</h3>
             <p>Seacraft partners with clients to take on complex challenges and provide innovative solutions that make a positive, lasting impact.</p>
             <div className="projects">
-                <article title="Seacraft Technology Solutions Limited has proudly provided Remote Operated Vehicle (ROV) services for the prestigious SNEPCO-BRORON-TMT project.">
+                <article onClick={() => navigate("/project/overview")} title="Seacraft Technology Solutions Limited has proudly provided Remote Operated Vehicle (ROV) services for the prestigious SNEPCO-BRORON-TMT project.">
                     <figure>
                         <img src={project} alt="Seacraft Technology Solutions Limited has proudly provided Remote Operated Vehicle (ROV) services for the prestigious SNEPCO-BRORON-TMT project." loading="lazy" />
                     </figure>

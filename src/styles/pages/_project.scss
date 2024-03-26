@@ -83,6 +83,7 @@
             padding: $md;
             overflow: hidden;
             width: 50%;
+            cursor: pointer;
 
             @media (max-width: 1000px) {
                 width: 80%;
@@ -144,6 +145,309 @@
                 color: $secondary100;
                 font-family: $Inter;
                 cursor: pointer;
+            }
+        }
+    }
+}
+
+#project__overview {
+    padding: 110px $px-fluid 3rem $px-fluid;
+
+    @media (max-width: 850px) {
+        padding: 90px 0 $xl 0;
+    }
+
+    figure {
+        margin-bottom: $xl;
+
+        @media (max-width: 750px) {
+            padding: 0 $px-fluid;
+
+            img {
+                min-height: 330px;
+                object-fit: cover;
+            }
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .wrapper {
+        position: relative;
+
+        .service__slider {
+            padding-bottom: 3.5rem;
+
+            .slides {
+                background: #fff;
+            }
+
+            @media (max-width: 750px) {
+                padding-bottom: 8rem;
+
+                img {
+                    min-height: 330px;
+                    object-fit: cover;
+                    min-height: 330px;
+                }
+            }
+
+            .swiper-pagination {
+                bottom: 1.05rem;
+                width: fit-content;
+                left: 140px;
+                gap: 4px;
+                display: flex;
+                z-index: 10;
+
+                @media (max-width: 750px) {
+                    left: 50%;
+                    transform: translateX(-50%);
+                    bottom: $xl;
+                }
+
+                .swiper-pagination-bullet {
+                    background: #000;
+                    width: 3.6px;
+                    height: 3.6px;
+                    border-radius: 10px;
+                    opacity: 1;
+                    transition: all .3s ease-in-out;
+                    outline: 1px solid transparent;
+                    outline-offset: 4px;
+                }
+
+                .swiper-pagination-bullet-active {
+                    outline: 1px solid #000;
+                    height: 4.5px;
+                    width: 4.5px;
+                }
+            }
+        }
+
+        .navigate {
+            margin: -2.5rem 0 $base 0;
+            display: flex;
+            gap: $md;
+            max-width: fit-content;
+            position: relative;
+            z-index: 1;
+
+            button {
+                border: none;
+                background-color: transparent;
+
+                &:focus-visible {
+                    outline: 1px solid $secondary100;
+                }
+            }
+
+            @media (max-width: 750px) {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: $xx;
+                z-index: 10;
+            }
+        }
+    }
+
+    &__description {
+        display: grid;
+        grid-template-columns: .5fr 1fr;
+
+        @media (max-width: 750px) {
+            grid-template-columns: 1fr;
+        }
+
+        >* {
+            border: 1px solid $secondary100;
+            padding: 3.5rem $xx;
+
+            &:nth-child(1) {
+                border-top: 1px solid $secondary100;
+                border-bottom: 1px solid $secondary100;
+
+                @media (min-width: 750px) {
+                    position: sticky;
+                    top: 3rem;
+                    max-height: 100vh;
+                }
+            }
+
+            @media (max-width: 750px) {
+                padding: $base $px-fluid;
+                border: none;
+                border-bottom: 1px solid $secondary100;
+            }
+
+            h2 {
+                max-width: 300px;
+                margin: $sm 0;
+                font-size: calc($xx + 10px);
+                font-weight: 400;
+                margin-top: $lg;
+                line-height: 1.2;
+                font-family: $Recoleta;
+
+                @media (max-width: 750px) {
+                    max-width: 100%;
+                    text-align: center;
+                }
+
+                @media (max-width: 750px) {
+                    font-size: calc($lg + 2px);
+                }
+            }
+
+            img {
+                display: block;
+                height: 71px;
+
+                @media (max-width: 750px) {
+                    margin: 0 auto;
+                }
+            }
+        }
+
+        .description {
+            border-left: 0;
+            padding: 0;
+
+            @media (max-width: 750px) {
+                border-top: 0;
+                border-left: 1px solid $secondary100;
+                border-left: 0;
+            }
+
+            .paragraph {
+                padding: 3.5rem $xx;
+                display: flex;
+                flex-direction: column;
+                gap: 1.6rem;
+
+                @media (max-width: 750px) {
+                    padding: $xx $px-fluid;
+                }
+
+                p {
+                    font-size: $base;
+                    line-height: 1.8;
+                    font-family: $AvenitLT;
+                    text-align: justify;
+                }
+            }
+
+            .pdfs {
+                padding: 3.5rem $xx;
+                border-top: 1px solid $secondary100;
+                border-bottom: 1px solid $secondary100;
+
+                @media (max-width: 750px) {
+                    padding: $xx $px-fluid;
+                }
+
+                h3 {
+                    font-family: $Recoleta;
+                    font-size: calc($xl - 2px);
+                    font-weight: 400;
+
+                    @media (max-width: 750px) {
+                        font-size: $lg;
+                    }
+                }
+
+                .pdf {
+                    display: flex;
+                    align-items: center;
+                    border: none;
+                    background: transparent;
+                    color: $secondary100;
+                    font-size: $base;
+                    font-weight: 600;
+                    font-family: $AvenitLT;
+                    gap: 10px;
+                    margin: $base 0;
+                    text-align: justify;
+
+                    &:focus-visible {
+                        outline: 1px solid $secondary100;
+                    }
+
+                }
+
+                .document {
+                    position: fixed;
+                    height: 100vh;
+                    overflow-y: scroll;
+                    inset: 0;
+                    z-index: 1000;
+                    background-color: hsl(0, 0%, 0%, .7);
+                    padding: $base 0;
+
+                    .close {
+                        font-size: $base;
+                        margin: 0 0 $base 20%;
+                        background: transparent;
+                        border: none;
+
+                        @media (max-width: 1000px) {
+                            margin: 0 0 $base 10%;
+                        }
+
+                        @media (max-width: 750px) {
+                            margin: 0 0 $base $base;
+                        }
+                    }
+
+                    .react-pdf__Page {
+                        background: transparent !important;
+
+                        >* {
+                            width: 100%;
+                            max-width: 100%;
+                            display: block;
+                            margin: 0 auto;
+                        }
+                    }
+                }
+            }
+
+            .mail {
+                padding: 3.5rem $xx 3.5rem $xx;
+
+                @media (max-width: 750px) {
+                    padding: $xx $px-fluid;
+                }
+
+                h3 {
+                    font-family: $Recoleta;
+                    font-size: calc($xl - 2px);
+                    font-weight: 400;
+
+                    @media (max-width: 750px) {
+                        font-size: $lg;
+                    }
+                }
+
+                a {
+                    color: #000;
+                    font-family: $AvenitLT;
+                    font-size: $base;
+                    font-weight: 600;
+                    display: block;
+                    text-align: justify;
+
+                    &:visited {
+                        color: #000;
+                    }
+
+                    span {
+                        color: $secondary100;
+                    }
+                }
             }
         }
     }
