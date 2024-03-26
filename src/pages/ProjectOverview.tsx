@@ -11,6 +11,7 @@ import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
 import 'react-pdf/dist/esm/Page/TextLayer.css';
 import heroImg from "../assets/Seacraft Asset/Images/tmt-hero.png"
 import video1 from "../assets/videos/video1.mp4"
+import video2 from "../assets/videos/video2.mp4"
 import { project } from "./Project";
 import ReactPlayer from 'react-player'
 
@@ -104,6 +105,7 @@ const ProjectOverview: FC = () => {
                         <p>
                             At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est.
                         </p>
+                        <ReactPlayer style={{ background: "hsla(0, 0%, 0%, .4)" }} url={video2} controls muted={true} width="100%" pip={true} stopOnUnmount={false} />
                         <ReactPlayer style={{ background: "hsla(0, 0%, 0%, .4)" }} url={video1} controls muted={true} width="100%" pip={true} stopOnUnmount={false} />
                         {/* )} */}
                     </div>
