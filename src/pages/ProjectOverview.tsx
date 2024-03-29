@@ -86,7 +86,7 @@ const ProjectOverview: FC = () => {
                     }
                 </figure>
             }
-            <div id="service__description">
+            <div id="project__overview__description">
                 <div className="icon-name">
                     {/* <img src={service?.pageIcon} alt={service?.name} /> */}
                     <h2>SNEPCO
@@ -105,9 +105,11 @@ const ProjectOverview: FC = () => {
                         <p>
                             At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est.
                         </p>
-                        <ReactPlayer style={{ background: "hsla(0, 0%, 0%, .4)" }} url={video2} controls muted={true} width="100%" pip={true} stopOnUnmount={false} />
-                        <ReactPlayer style={{ background: "hsla(0, 0%, 0%, .4)" }} url={video1} controls muted={true} width="100%" pip={true} stopOnUnmount={false} />
                         {/* )} */}
+                    </div>
+                    <div className="video-player">
+                        <ReactPlayer url={video2} controls muted={true} pip={true} stopOnUnmount={false} />
+                        <ReactPlayer url={video1} controls muted={true} pip={true} stopOnUnmount={false} />
                     </div>
                 </div>
             </div>

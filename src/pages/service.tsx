@@ -71,7 +71,7 @@ const Service: FC = () => {
         };
     }, [location.pathname]);
 
-    const windowWidth = useWindowWidth()
+    const windowWidth = useWindowWidth();
 
     return (
         <div id="service">
@@ -81,51 +81,103 @@ const Service: FC = () => {
                 </svg>
                 <span>Back to List of Services</span>
             </Link>
-            {service?.hero.length > 1 ?
-                <div className="wrapper">
-                    <Swiper
-                        onSwiper={setSwiperRef}
-                        effect={'fade'}
-                        loop={true}
-                        autoplay={{
-                            delay: 4000,
-                            disableOnInteraction: false,
-                        }}
-                        pagination={{
-                            clickable: true
-                        }}
-                        className='service__slider'
-                        modules={[EffectFade, Autoplay, Pagination]}
-                    >
-                        {service?.hero?.map((hero: any, index: number) =>
-                            <SwiperSlide onClick={() => console.log(hero)} className='slides' key={index}>
-                                <img className='background-image' src={hero} alt={`${service?.name} Service Logo`} />
-                            </SwiperSlide>
-                        )}
-                    </Swiper>
-                    <div className="navigate">
-                        <button onClick={() => swiperRef?.slidePrev()}>
-                            <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect x="40.6204" y="40.6204" width="40.2407" height="40.2407" rx="1.62037" transform="rotate(-180 40.6204 40.6204)" stroke="black" strokeWidth="0.759259" />
-                                <path d="M15.9742 20.7662L22.0184 14.3766L23.4287 15.8675L18.7948 20.7662L23.4287 25.6649L22.0184 27.1558L15.9742 20.7662Z" fill="black" />
-                            </svg>
-                        </button>
-                        <button onClick={() => swiperRef?.slideNext()}>
-                            <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect x="0.37963" y="0.37963" width="40.2407" height="40.2407" rx="1.62037" stroke="black" strokeWidth="0.759259" />
-                                <path d="M25.0258 20.2338L18.9816 26.6234L17.5713 25.1325L22.2052 20.2338L17.5713 15.3351L18.9816 13.8442L25.0258 20.2338Z" fill="black" />
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-                :
-                <figure>
-                    {windowWidth >= 700 ?
-                        <img src={service?.hero} alt={`${service?.name} Service Logo`} />
+            {windowWidth >= 700 ?
+                <>
+                    {service?.hero.length > 1 ?
+                        <div className="wrapper">
+                            <Swiper
+                                onSwiper={setSwiperRef}
+                                effect={'fade'}
+                                loop={true}
+                                autoplay={{
+                                    delay: 4000,
+                                    disableOnInteraction: false,
+                                }}
+                                pagination={{
+                                    clickable: true
+                                }}
+                                className='service__slider'
+                                modules={[EffectFade, Autoplay, Pagination]}
+                            >
+                                {service?.hero?.map((hero: any, index: number) =>
+                                    <SwiperSlide onClick={() => console.log(hero)} className='slides' key={index}>
+                                        <img className='background-image' src={hero} alt={`${service?.name} Service Logo`} />
+                                    </SwiperSlide>
+                                )}
+                            </Swiper>
+                            <div className="navigate">
+                                <button onClick={() => swiperRef?.slidePrev()}>
+                                    <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="40.6204" y="40.6204" width="40.2407" height="40.2407" rx="1.62037" transform="rotate(-180 40.6204 40.6204)" stroke="black" strokeWidth="0.759259" />
+                                        <path d="M15.9742 20.7662L22.0184 14.3766L23.4287 15.8675L18.7948 20.7662L23.4287 25.6649L22.0184 27.1558L15.9742 20.7662Z" fill="black" />
+                                    </svg>
+                                </button>
+                                <button onClick={() => swiperRef?.slideNext()}>
+                                    <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="0.37963" y="0.37963" width="40.2407" height="40.2407" rx="1.62037" stroke="black" strokeWidth="0.759259" />
+                                        <path d="M25.0258 20.2338L18.9816 26.6234L17.5713 25.1325L22.2052 20.2338L17.5713 15.3351L18.9816 13.8442L25.0258 20.2338Z" fill="black" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
                         :
-                        <img src={service?.logo} alt={`${service?.name} Service Logo`} />
+                        <figure>
+                            {windowWidth >= 700 ?
+                                <img src={service?.hero} alt={`${service?.name} Service Logo`} />
+                                :
+                                <img src={service?.logo} alt={`${service?.name} Service Logo`} />
+                            }
+                        </figure>
                     }
-                </figure>
+                </>
+                :
+                <>
+                    {service?.hero.length > 1 ?
+                        <div className="wrapper">
+                            <Swiper
+                                onSwiper={setSwiperRef}
+                                effect={'fade'}
+                                loop={true}
+                                autoplay={{
+                                    delay: 4000,
+                                    disableOnInteraction: false,
+                                }}
+                                pagination={{
+                                    clickable: true
+                                }}
+                                className='service__slider'
+                                modules={[EffectFade, Autoplay, Pagination]}
+                            >
+                                {service?.mobileHero?.map((hero: any, index: number) =>
+                                    <SwiperSlide onClick={() => console.log(hero)} className='slides' key={index}>
+                                        <img className='background-image' src={hero} alt={`${service?.name} Service Logo`} />
+                                    </SwiperSlide>
+                                )}
+                            </Swiper>
+                            <div className="navigate">
+                                <button onClick={() => swiperRef?.slidePrev()}>
+                                    <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="40.6204" y="40.6204" width="40.2407" height="40.2407" rx="1.62037" transform="rotate(-180 40.6204 40.6204)" stroke="black" strokeWidth="0.759259" />
+                                        <path d="M15.9742 20.7662L22.0184 14.3766L23.4287 15.8675L18.7948 20.7662L23.4287 25.6649L22.0184 27.1558L15.9742 20.7662Z" fill="black" />
+                                    </svg>
+                                </button>
+                                <button onClick={() => swiperRef?.slideNext()}>
+                                    <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="0.37963" y="0.37963" width="40.2407" height="40.2407" rx="1.62037" stroke="black" strokeWidth="0.759259" />
+                                        <path d="M25.0258 20.2338L18.9816 26.6234L17.5713 25.1325L22.2052 20.2338L17.5713 15.3351L18.9816 13.8442L25.0258 20.2338Z" fill="black" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        :
+                        <figure>
+                            {windowWidth >= 700 ?
+                                <img src={service?.hero} alt={`${service?.name} Service Logo`} />
+                                :
+                                <img src={service?.logo} alt={`${service?.name} Service Logo`} />
+                            }
+                        </figure>
+                    }</>
             }
             <div id="service__description">
                 <div className="icon-name">

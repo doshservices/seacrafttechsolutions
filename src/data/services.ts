@@ -5,8 +5,12 @@ import marinePageIcon from "../assets/Icons/marine-pageIcon.svg"
 
 import remoteHero1 from "../assets/Seacraft Asset/Images/remoteHero1.jpg"
 import remoteHero2 from "../assets/Seacraft Asset/Images/remoteHero2.png"
-import remoteHero3 from "../assets/Seacraft Asset/Images/remoteHero3.png"
+import remoteHero3 from "../assets/Seacraft Asset/Images/remoteHero.png"
 import remoteHero4 from "../assets/Seacraft Asset/Images/remoteHero4.png"
+import remoteHeromb1 from "../assets/Seacraft Asset/Images/mobile/Hero Section-1.png"
+import remoteHeromb2 from "../assets/Seacraft Asset/Images/mobile/Hero Section-2.png"
+import remoteHeromb3 from "../assets/Seacraft Asset/Images/mobile/Hero Section-7.png"
+import remoteHeromb4 from "../assets/Seacraft Asset/Images/mobile/Hero Section-4.png"
 import remoteVehicleIcon from "../assets/Icons/remote-vehicle.svg"
 import remoteVehicleLogo from "../assets/Seacraft Asset/Images/remoteVehicle.png"
 import remoteVehiclePageIcon from "../assets/Icons/remotepage-icon.svg"
@@ -17,12 +21,20 @@ import subseaHero1 from "../assets/Seacraft Asset/Images/Hero Section-3.png"
 import subseaHero2 from "../assets/Seacraft Asset/Images/Hero Section-1.png"
 import subseaHero3 from "../assets/Seacraft Asset/Images/Hero Section.png"
 import subseaHero4 from "../assets/Seacraft Asset/Images/Hero Section-2.png"
+import subseaHeromb1 from "../assets/Seacraft Asset/Images/mobile/Frame 1000007759.png"
+import subseaHeromb2 from "../assets/Seacraft Asset/Images/mobile/Frame 1000007760.png"
+import subseaHeromb3 from "../assets/Seacraft Asset/Images/mobile/Frame 1000007758.png"
+import subseaHeromb4 from "../assets/Seacraft Asset/Images/mobile/Hero Section.png"
 import subseaPageIcon from "../assets/Icons/sebseaPageIcon.svg"
 
 import autoHero1 from "../assets/Seacraft Asset/Images/autoHero.png"
 import autoHero2 from "../assets/Seacraft Asset/Images/autoHero2.png"
 import autoHero3 from "../assets/Seacraft Asset/Images/autoHero3.png"
 import autoHero4 from "../assets/Seacraft Asset/Images/autoHero4.png"
+import autoHeromb1 from "../assets/Seacraft Asset/Images/mobile/Hero Section-5.png"
+import autoHeromb2 from "../assets/Seacraft Asset/Images/mobile/Frame 1000007761.png"
+import autoHeromb3 from "../assets/Seacraft Asset/Images/mobile/Hero Section-6.png"
+import autoHeromb4 from "../assets/Seacraft Asset/Images/mobile/Hero Section-3.png"
 import autoVehicle from "../assets/Icons/unmanned.svg"
 import unmannedLogo from "../assets/Seacraft Asset/Images/unmannedVehicle.png"
 import unmannedPageIcon from "../assets/Icons/unmannedPageIcon.svg"
@@ -35,6 +47,9 @@ import facilityMaintenancePageIcon from "../assets/Icons/maintainancePageIcon.sv
 import piggingHero1 from "../assets/Seacraft Asset/Images/piggingHero1.png"
 import piggingHero2 from "../assets/Seacraft Asset/Images/piggingHero2.png"
 import piggingHero3 from "../assets/Seacraft Asset/Images/piggingHero3.png"
+import piggingHeromb1 from "../assets/Seacraft Asset/Images/mobile/Hero Section-8.png"
+import piggingHeromb2 from "../assets/Seacraft Asset/Images/mobile/Hero Section-9.png"
+import piggingHeromb3 from "../assets/Seacraft Asset/Images/mobile/Hero Section-10.png"
 import pipeLineLogo from "../assets/Seacraft Asset/Images/pigging.png"
 import pipePiggingIcon from "../assets/Icons/inspection.svg"
 import piggingPageIcon from "../assets/Icons/piggingPageIcon.svg"
@@ -97,6 +112,7 @@ export const services = [
         id: "remotely-operated-vehicle",
         logo: remoteVehicleLogo,
         hero: [remoteHero1, remoteHero2, remoteHero3, remoteHero4],
+        mobileHero: [remoteHeromb1, remoteHeromb2, remoteHeromb3, remoteHeromb4],
         pageIcon: remoteVehiclePageIcon,
         fullDescription: [
             "At Seacraft, we are at the forefront of Remotely Operated Vehicle (ROV) solutions, pioneering cutting-edge technology to navigate the depths of the ocean with precision and expertise. Our fleet of ROVs, equipped with state-of-the-art sensors, cameras, and manipulators, enables us to conduct a wide range of subsea tasks with unparalleled accuracy and efficiency. From intricate inspections of underwater structures to complex interventions and repairs, our ROVs are equipped to handle the most challenging subsea environments.",
@@ -112,6 +128,7 @@ export const services = [
         id: "customized-subsea-tooling",
         logo: subseaLogo,
         hero: [subseaHero1, subseaHero2, subseaHero3, subseaHero4],
+        mobileHero: [subseaHeromb1, subseaHeromb2, subseaHeromb3, subseaHeromb4],
         pageIcon: subseaPageIcon,
         fullDescription: [
             " Seacraft Technology Solutions Limited stands at the forefront of the industry, conceptualizing and offering Customized Subsea Tooling solutions tailored to the unique demands of underwater operations.Through a combination of conceptualizing innovative design, precision engineering, and extensive industry expertise, we develop specialized tools optimized to deliver unparalleled efficiency and effectiveness in the challenging subsea environment.",
@@ -127,6 +144,7 @@ export const services = [
         id: "autonomous-unmanned-vehicle",
         logo: unmannedLogo,
         hero: [autoHero1, autoHero2, autoHero3, autoHero4],
+        mobileHero: [autoHeromb1, autoHeromb2, autoHeromb3, autoHeromb4],
         pageIcon: unmannedPageIcon,
         fullDescription: [
             "At Seacraft, we are at the forefront of Autonomous Unmanned Vehicle(AUV) solutions, pioneering groundbreaking technology to explore the depths of the ocean with unparalleled precision and efficiency.Our fleet of AUVs, equipped with state - of - the - art sensors, navigational systems, and data collection capabilities, empowers us to conduct comprehensive subsea missions with exceptional accuracy and reliability.",
@@ -156,6 +174,7 @@ export const services = [
         url: "/services/pipeline-pigging-inspection",
         id: "pipeline-pigging-inspection",
         hero: [piggingHero1, piggingHero2, piggingHero3],
+        mobileHero: [piggingHeromb1, piggingHeromb2, piggingHeromb3],
         pageIcon: piggingPageIcon,
         logo: pipeLineLogo,
         fullDescription: [
