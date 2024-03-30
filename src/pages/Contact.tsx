@@ -2,6 +2,7 @@ import heroImg from "../assets/Seacraft Asset/Images/contact-hero.png"
 import { FC, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import ReCAPTCHA from "react-google-recaptcha"
 
 const Contact: FC = () => {
 
@@ -26,6 +27,7 @@ const Contact: FC = () => {
     const [showErrorMsg, setShowErrorMsg] = useState<string>("")
     const [isSubmitting, setIsSubmitting] = useState<boolean>(false)
     const [formFields, setFormFields] = useState<FormFields>(defaultFormFields);
+    const [val, setVal] = useState<null | string>(null)
     // console.log(formFields);
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -124,7 +126,8 @@ const Contact: FC = () => {
                                 <p className="error">{showErrorMsg}</p>
                                 : null
                             }
-                            <button disabled={isSubmitting} type="submit">{isSubmitting ? "Sending Message ..." : "Send Message"}</button>
+                            <ReCAPTCHA sitekey="6LdVTqkpAAAAALok93OMijprmGxx4xaYLoEkknzS" onChange={val => setVal(val)} />
+                            <button disabled={!val} type="submit">{isSubmitting ? "Sending Message ..." : "Send Message"}</button>
                         </>
                     }
                 </form>

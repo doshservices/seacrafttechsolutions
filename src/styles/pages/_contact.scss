@@ -224,6 +224,10 @@
                 }
             }
 
+            button:disabled {
+                opacity: .7;
+            }
+
             .error {
                 color: red;
             }
