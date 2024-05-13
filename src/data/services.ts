@@ -88,6 +88,18 @@ import manning from "../assets/Seacraft Asset/Images/manning.png"
 import manningHero from "../assets/Seacraft Asset/Images/offShoreHero.png"
 import manningPageIcon from "../assets/Icons/offShorePageIcon.svg"
 
+import tankCleaningLogo from '../assets/Seacraft Asset/tank-cleaning-logo.png'
+import tankCleaningHero from '../assets/Seacraft Asset/tank-cleaning-hero.png'
+import tankCleaningPageIcon from '../assets/Seacraft Asset/tank-cleaning-page-icon.svg'
+
+import lightWellLogo from '../assets/Seacraft Asset/light-well-logo.png'
+import lightWellHero from '../assets/Seacraft Asset/light-well-hero.png'
+import lightWellPageIcon from '../assets/Seacraft Asset/tank-cleaning-page-icon.svg'
+
+import plugLogo from '../assets/Seacraft Asset/plug-logo.png'
+import plugHero from '../assets/Seacraft Asset/plug-hero.png'
+import plugPageIcon from '../assets/Seacraft Asset/plug-page-icon.svg'
+
 export const services = [
     {
         name: "Marine Operations",
@@ -304,6 +316,45 @@ export const services = [
             "With a focus on safety, competence, and reliability, we carefully select and train personnel to meet the specific requirements of each client and project.Whether it's offshore platform operations or onshore facility management, our experienced team ensures seamless integration and effective performance in diverse work environments.",
             "At Seacraft, we understand the importance of having the right people in place to ensure the success of offshore and onshore operations.That's why we offer flexible staffing solutions tailored to meet the unique needs of each project, providing qualified personnel who are committed to excellence and safety.",
             "Trust Seacraft for reliable Manning services that support the smooth operation of both onshore and offshore facilities.With our commitment to quality and customer satisfaction, we provide peace of mind in the challenging marine environment, enabling clients to focus on achieving their operational goals with confidence and efficiency."
+        ]
+    },
+    {
+        name: "Remote tank cleaning",
+        icon: dredgingIcon,
+        briefDescription: "Through proactive maintenance, we uphold waterway efficiency and safety, supporting sustainable marine operations and environmental preservation.",
+        url: "/services/remote-tank-cleaning",
+        id: "remote-tank-cleaning",
+        hero: [tankCleaningHero],
+        pageIcon: tankCleaningPageIcon,
+        logo: tankCleaningLogo,
+        fullDescription: [
+            "Seacraft specializes in remote tank clearing solutions, utilizing advanced technology and expert personnel to efficiently remove and dispose of liquid or sludge from tanks in challenging or inaccessible locations. With our remote capabilities, we ensure safe and thorough tank cleaning operations without the need for onsite personnel, minimizing downtime and environmental impact."
+        ]
+    },
+    {
+        name: "Light Well Intervention",
+        icon: dredgingIcon,
+        briefDescription: "Through proactive maintenance, we uphold waterway efficiency and safety, supporting sustainable marine operations and environmental preservation.",
+        url: "/services/light-well-intervention",
+        id: "light-well-intervention",
+        hero: [lightWellHero],
+        pageIcon: lightWellPageIcon,
+        logo: lightWellLogo,
+        fullDescription: [
+            "Seacraft offers comprehensive Light Well Intervention (LWI) services, providing efficient solutions for well maintenance and remediation without the need for full-scale rig operations. With our expert team and advanced equipment, we deliver quick and cost-effective interventions to optimize well performance and maximize production."
+        ]
+    },
+    {
+        name: "Plug & Abandonment",
+        icon: dredgingIcon,
+        briefDescription: "Through proactive maintenance, we uphold waterway efficiency and safety, supporting sustainable marine operations and environmental preservation.",
+        url: "/services/plug-&-abandonment",
+        id: "plug-&-abandonment",
+        hero: [plugHero],
+        pageIcon: plugPageIcon,
+        logo: plugLogo,
+        fullDescription: [
+            "At Seacraft, we specialize in safe and environmentally responsible decommissioning of oil and gas wells, ensuring compliance with regulatory standards. From consultation and planning to cement plugging and site restoration, our expert team delivers efficient and tailored solutions for seamless well abandonment."
         ]
     },
 ]

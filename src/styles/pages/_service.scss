@@ -284,6 +284,28 @@
                 }
             }
 
+            .light-well-tools,
+            .plug-extra {
+                padding: 3.5rem $xx 3.5rem $xx;
+                border-top: 1px solid $secondary100;
+
+                h3 {
+                    font-family: $Recoleta;
+                    font-size: calc($xl - 2px);
+                    font-weight: 400;
+                    margin-bottom: 1.5rem;
+
+                    @media (max-width: 750px) {
+                        font-size: $lg;
+                    }
+                }
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+
             .mail {
                 padding: 3.5rem $xx 3.5rem $xx;
 

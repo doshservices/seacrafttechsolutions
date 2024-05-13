@@ -104,7 +104,12 @@
                 }
             }
 
-            &:nth-child(n + 10) {
+            @media (max-width: 700px) {
+                border-right: 0 !important;
+                border-left: 0 !important;
+            }
+
+            &:nth-child(n + 13) {
                 border-bottom: 1px solid $secondary100;
             }
 
@@ -157,9 +162,44 @@
                 border-right: 1px solid $secondary100;
             }
 
-            @media (max-width: 700px) {
-                border: none !important;
-                border-top: 1px solid $secondary100 !important;
+            &:nth-child(13) {
+
+                @media (max-width: 850px) {
+                    border-bottom: 0;
+                }
+            }
+
+            &:nth-child(14) {
+
+                @media (max-width: 850px) {
+                    border-right: 1px solid $secondary100;
+                    border-bottom: 0;
+                }
+            }
+
+            &:nth-child(15) {
+                border-right: 1px solid $secondary100;
+
+                @media (max-width: 850px) {
+                    border-right: 0;
+                }
+            }
+
+            &:nth-child(16) {
+                @media (max-width: 850px) {
+                    border-right: 1px solid $secondary100;
+                }
+
+                @media (max-width: 700px) {
+                    border-top: 0;
+                    border-bottom: 0;
+                }
+            }
+
+            &:nth-child(17) {
+                @media (max-width: 850px) {
+                    border-right: 1px solid $secondary100;
+                }
             }
 
             img {
@@ -206,16 +246,24 @@
             }
 
             &:nth-child(1) {
-                border-right: 0;
 
-                @media (max-width: 700px) {
-                    border-left: 0;
+                @media (max-width: 850px) {
+                    border-right: 1px solid $secondary100;
+
+                    @media (max-width: 700px) {
+                        border-top: 0 !important;
+                    }
                 }
             }
 
-            @media (max-width: 700px) {
+            &:nth-child(2) {
+                border-right: 1px solid $secondary100;
                 border-left: 0;
-                border-right: 0;
+            }
+
+            @media (max-width: 700px) {
+                border-left: 0 !important;
+                border-right: 0 !important;
             }
 
             img {

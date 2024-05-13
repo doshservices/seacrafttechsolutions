@@ -4,6 +4,10 @@ import { Link, useLocation } from "react-router-dom";
 import { useWindowWidth } from "../utils/useWindowWidth";
 import { Document, Page, pdfjs } from 'react-pdf';
 import { Swiper, SwiperSlide, SwiperClass } from 'swiper/react';
+import lightwellToolsImage from '../assets/Seacraft Asset/leghtwell-tools.png'
+import shallow from '../assets/Seacraft Asset/shallow.png'
+import wellHead from '../assets/Seacraft Asset/well-head.png'
+import casing from '../assets/Seacraft Asset/casing.png'
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
@@ -22,6 +26,8 @@ const Service: FC = () => {
     const location = useLocation();
     const [service, setService] = useState<any>(null);
     const subseaPath = "/services/customized-subsea-tooling"
+    const lightandwellPath = "/services/light-well-intervention"
+    const plugPath = "/services/plug-&-abandonment"
     const [numPages, setNumPages] = useState<number | null>(null);
     const [showPdf, setShowPdf] = useState(false)
     const [file, setFile] = useState(NSSBreaker)
@@ -190,6 +196,30 @@ const Service: FC = () => {
                             <p key={index}>{description}</p>
                         )}
                     </div>
+                    {location.pathname === lightandwellPath ?
+                        <section className="light-well-tools">
+                            <h3>RLWI Equiptment</h3>
+                            <img src={lightwellToolsImage} alt="tools" />
+                        </section>
+                        : null
+                    }
+                    {location.pathname === plugPath ?
+                        <>
+                            <section className="plug-extra">
+                                <h3>Casing Perforation and Cement Plug Replacement</h3>
+                                <img src={casing} alt="Casing Perforation and Cement Plug Replacement" />
+                            </section>
+                            <section className="plug-extra">
+                                <h3>Well Head Severance Tool - AXE</h3>
+                                <img src={wellHead} alt="Well Head Severance Tool - AXE" />
+                            </section>
+                            <section className="plug-extra">
+                                <h3>Shallow Annulus Plugs</h3>
+                                <img src={shallow} alt="Shallow Annulus Plugs" />
+                            </section>
+                        </>
+                        : null
+                    }
                     {location.pathname === subseaPath ?
                         <>
                             <section className="pdfs">
